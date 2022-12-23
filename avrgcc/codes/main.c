@@ -10,7 +10,7 @@ int main (void)
   DDRD    |=0b00000000 ;
   PORTD=0xFC;
 
-DDRB = 0b00100000 ; // 8 pin as ouput
+DDRB = 0b00100000 ; // 13 pin as ouput
 
 
 while(1)
