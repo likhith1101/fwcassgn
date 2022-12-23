@@ -1,0 +1,210 @@
+% #######################################
+% ########### FILL THESE IN #############
+% #######################################
+\def\mytitle{ BOOLEAN LOGIC IMPLEMENTATION  BY USING   ARDUINO WITH AVR GCC}
+\def\mykeywords{}
+\def\myauthor{GADDAM LIKHITHESHWAR}
+\def\contact{glikhitheshwar@gmail.com}
+\def\mymodule{}
+% #######################################
+% #### YOU DON'T NEED TO TOUCH BELOW ####
+% #######################################
+\documentclass[12pt, a4paper]{article}
+\usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75cm,bottom=1.5cm]{geometry}
+\twocolumn
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage{karnaugh-map}
+%colour our links, remove weird boxes
+\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+%Stop indentation on new paragraphs
+\usepackage[parfill]{parskip}
+%% Arial-like font
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+%Napier logo top right
+\usepackage{watermark}
+%Lorem Ipusm dolor please don't leave any in you final report ;)
+\usepackage{circuitikz}
+\usetikzlibrary{calc}
+\usepackage{tikz}
+
+\usetikzlibrary{shapes, arrows, chains, decorations.markings,intersections,calc}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+%give us the Capital H that we all know and love
+\usepackage{float}
+%tone down the line spacing after section titles
+\usepackage{titlesec}
+%Cool maths printing
+\usepackage{amsmath}
+\usepackage{tabularx}
+%PseudoCode
+\usepackage{algorithm2e}
+
+\titlespacing{\subsection}{0pt}{\parskip}{-3pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
+\newcommand{\figuremacro}[5]{
+    \begin{figure}[#1]
+        \centering
+        \includegraphics[width=#5\columnwidth]{#2}
+        \caption[#3]{\textbf{#3}#4}
+        \label{fig:#2}
+    \end{figure}
+}
+
+\lstset{
+frame=single,
+breaklines=true,
+columns=fullflexible
+}
+
+
+\title{\mytitle}
+  \author{\myauthor\hspace{1em}\\\contact\\FWC220099    IITH-Future Wireless Communications     Assignment-1\hspace{0.5em}\hspace{0.5em}\mymodule}
+\date{}
+\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle,pdfkeywords=\mykeywords}
+\sloppy
+% #######################################
+% ########### START FROM HERE ###########
+% #######################################
+ 
+ \begin{document}
+ \maketitle
+ \tableofcontents
+    %\begin{figure}
+        %\centering
+        %\includegraphics[width=\linewidth]{}
+        %\includegraphics[width=\linewidth]{}
+    %    \caption{\textbf{Karnaugh Map}}
+     %   \label{fig:my_label}
+    %\end{figure}
+  \textbf{}{\mykeywords}
+\vspace{5mm}      
+\section{Abstract}
+This manual shows Realisation of boolean \\
+expression from the given k-map by using arduino with AVR GCC
+
+\vspace{5mm}    
+\section{Components}
+     
+       \begin{tabularx}{0.43\textwidth}{
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X | }
+\hline
+\textbf{Component}&\textbf{Value}& \textbf{Quantity}\\ \hline
+Arduino   & UNO & 1 \\ \hline
+Bread board   & - & 1 \\ \hline
+Jumper wires  & M-M & 8 \\ \hline
+Led           & - & 1\\ \hline
+Resistor      & 150ohms & 1\\ \hline
+\end{tabularx}
+\begin{center}
+   
+\end{center}
+
+\section{BooleanEquation}
+By using boolean equation we write our code in assembly  we get the boolean equation as follows \\        Y = QR'+S
+
+\section{Hardware Connections }
+1.in arduino we are having pins P,Q,R,S.here we are using port B pin 13 is taken as output pin. \\
+\hfill \break
+2.port D pins 2,3,4,5 pins are taken as a inputs. portD pins 2,3,4,5 pins are connected vcc or gnd in breadboard as per truth table
+
+\vspace{5mm}
+
+
+\section{Procedure}
+
+\textbf 1) Connect 5v of the Arduino to the top red of the bread board ang GND to the bottom green
+\hfill \break
+\hfill \break
+\textbf 2) Connect b5 pin in the arduino to connect to one LED+
+\hfill \break
+\hfill \break
+\textbf 3) Connect arduino d2 pin to the gnd or vcc according to inputs
+\hfill \break
+\hfill \break
+\textbf 4) Connect arduino d3 pin to the gnd or vcc according to inputs
+\hfill \break
+\hfill \break
+\textbf 5) Connect arduino d4 pin to the gnd or vcc according to inputs
+\hfill \break
+\hfill \break
+\textbf 6) Connect arduino d5 pin to the gnd or vcc according to inputs
+\hfill \break
+\hfill \break
+\textbf 6) Connect one LED+ to one end of the resisitor and other end of resistor to vcc and gnd the other terminal of LED
+\hfill \break
+\hfill \break
+\textbf 7) Change the d2 d3 d4 d5 pins in the arduino from vcc to gnd as per truthtable and observe the outputs
+\hfill \break
+
+\vspace{5mm}
+
+\section{Truth table for given K-map}
+\begin{tabularx}{0.46\textwidth} { 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X | }
+  \hline
+ P & Q & R & S  & Y\\
+\hline
+0 & 0 & 0 & 0 & 0 \\  
+\hline
+0 & 0 & 0 & 1 & 1 \\ 
+\hline
+0 & 0 & 1 & 0 & 0 \\
+\hline
+0 & 0 & 1 & 1 & 1 \\
+\hline
+0 & 1 & 0 & 0 & 1 \\  
+\hline
+0 & 1 & 0 & 1 & 1 \\ 
+\hline
+0 & 1 & 1 & 0 & 0 \\
+\hline
+0 & 1 & 1 & 1 & 1 \\
+\hline
+1 & 0 & 0 & 0 & 0 \\
+\hline
+1 & 0 & 0 & 1 & 1 \\
+\hline
+1 & 0 & 1 & 0 & 0 \\
+\hline
+1 & 0 & 1 & 1 & 1 \\
+\hline
+1 & 1 & 0 & 0 & 1 \\
+\hline
+1 & 1 & 0 & 1 & 1 \\
+\hline
+1 & 1 & 1 & 0 & 0 \\
+\hline
+1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabularx}
+\begin{center}
+TABLE 1
+\end{center}
+
+
+\section{Software}
+\textbf{Execute the following code using the below provided link.}\\
+\begin{center}
+\fbox{\parbox{8.5cm}{\url{https://github.com/likhith1101/fwcassgn}}}
+\end{center}
+ 
+%\begin{document}
+
+\vspace{5mm}  
+
+
+%\end{document}
+
+\end{document}
+
