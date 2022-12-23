@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Abstract}{1}{section.1}%
+\contentsline {section}{\numberline {2}Components}{1}{section.2}%
+\contentsline {section}{\numberline {3}BooleanEquation}{1}{section.3}%
+\contentsline {section}{\numberline {4}Hardware Connections }{1}{section.4}%
+\contentsline {section}{\numberline {5}Procedure}{1}{section.5}%
+\contentsline {section}{\numberline {6}Truth table for given K-map}{2}{section.6}%
+\contentsline {section}{\numberline {7}Software}{2}{section.7}%
