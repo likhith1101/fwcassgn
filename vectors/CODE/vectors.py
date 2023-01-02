@@ -30,17 +30,17 @@ E = np.array(([a,b]))
 F = np.array(([-a,-b]))
 
 sub = A - B   
-T=sub.transpose()# element wise addition
+T=sub.transpose()
 d1=(sub@T)**0.5   
 print(d1)
 
 sub = C - D   
-T=sub.transpose()# element wise addition
+T=sub.transpose()
 d2=(sub@T)**0.5
 print(d2)
 
 sub = E - F   
-T=sub.transpose()# element wise addition
+T=sub.transpose()
 d3=(sub@T)**0.5
 print(d3)
 
