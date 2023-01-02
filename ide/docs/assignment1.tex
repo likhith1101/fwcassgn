@@ -1,0 +1,208 @@
+% #######################################
+% ########### FILL THESE IN #############
+% #######################################
+\def\mytitle{IMPLEMENTATION OF BOOLEAN LOGIC IN ARDUINO IDE}
+\def\mykeywords{}
+\def\myauthor{GADDAM LIKHITHESHWAR}
+\def\contact{glikhitheshwar@gmail.com}
+\def\mymodule{}
+% #######################################
+% #### YOU DON'T NEED TO TOUCH BELOW ####
+% #######################################
+\documentclass[10pt, a4paper]{article}
+\usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75cm,bottom=1.5cm]{geometry}
+\twocolumn
+\usepackage{graphicx}
+
+\usepackage{amsfonts}
+\graphicspath{{./images/}}
+%colour our links, remove weird boxes
+\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+%Stop indentation on new paragraphs
+\usepackage[parfill]{parskip}
+%% Arial-like font
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+%Napier logo top right
+\usepackage{watermark}
+%Lorem Ipusm dolor please don't leave any in you final report ;)
+\usepackage{circuitikz}
+\usetikzlibrary{calc}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\usetikzlibrary{shapes, arrows, chains, decorations.markings,intersections,calc}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+%give us the Capital H that we all know and love
+\usepackage{float}
+%tone down the line spacing after section titles
+\usepackage{titlesec}
+%Cool maths printing
+\usepackage{amsmath}
+\usepackage{tabularx}
+%PseudoCode
+\usepackage{algorithm2e}
+\usepackage{karnaugh-map}
+
+\titlespacing{\subsection}{0pt}{\parskip}{-3pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
+\newcommand{\figuremacro}[5]{
+    \begin{figure}[#1]
+        \centering
+        \includegraphics[width=#5\columnwidth]{#2}
+        \caption[#3]{\textbf{#3}#4}
+        \label{fig:#2}
+    \end{figure}
+}
+
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\thiswatermark{\centering \put(-15,-100.0){\includegraphics[scale=0.3]{./figs/logo}} }
+\title{\mytitle}
+  \author{\myauthor\hspace{1em}\\\contact\\FWC22099    IITH-Future Wireless Communications     Assignment-1\hspace{0.5em}\hspace{0.5em}\mymodule}
+\date{}
+\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle,pdfkeywords=\mykeywords}
+\sloppy
+% #######################################
+% ########### START FROM HERE ###########
+% #######################################
+\begin{document}
+ \maketitle
+     \tableofcontents 
+
+ \section{Problem}
+ (GATE EE-2019) \\
+ Q.35 The output expression for the Karnaugh map shown below is \\ 
+ \begin{karnaugh-map}[4][4][1][$PQ$][$RS$]
+
+		\minterms{1,3,4,5,7,6,12,13,15,14}
+		\maxterms{0,2,8,9,10,11}
+
+		
+
+	\end{karnaugh-map}
+
+(A) $Q \overline{R} + S$ \hspace{3cm} (B) $Q \overline{R} + \overline{S}$ \\
+(C) $QR + S$ \hspace{3cm}             (D) $QR + \overline{S}$
+
+
+ 
+ 
+
+\section{Introduction}
+  
+    \paragraph{K-map}
+    is a systematic way of simplifying Boolean expressions. With the help of the K-map method, we can find the simplest POS and SOP expression, which is known as the minimum expression. The K-map provides a cookbook for simplification.
+Just like the truth table, a K-map contains all the possible values of input variables and their corresponding output values. However, in K-map, the values are stored in cells of the array. In each cell, a binary value of each input variable is stored.
+The K-map method is used for expressions containing 2, 3, 4, and 5 variables.
+      \section{Components}
+     
+       \begin{tabularx}{0.45\textwidth} { 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X | }
+\hline
+\textbf{Component} &  \textbf{Value} & \textbf{Quantity}\\
+\hline
+Arduino UNO &  & 1 \\  
+\hline
+Bread board & - & 1 \\
+\hline
+Jumper wires & M-M & 8 \\
+\hline
+Led & - & 1\\
+\hline
+Resistor & 150ohms & 1\\
+\hline
+\end{tabularx}
+\begin{center}
+    
+\end{center}
+       \subsection{Arduino} \vspace{5mm}
+      The Arduino uno has some ground pins, analog input pins A0-A3 and digital pins D1-D13 that can be used for both input as well as output. It also has two power pins that can generate 3.3V and 5V.In the following exercises, only the ground, 5V and digital pins will be used.
+   
+\section{K-Map}
+
+\begin{karnaugh-map}[4][4][1][$PQ$][$RS$]
+
+		\minterms{1,3,4,5,7,6,12,13,15,14}
+		\maxterms{0,2,8,9,10,11}
+
+		\implicant{4}{14}
+		\implicant{1}{7}
+
+
+
+	\end{karnaugh-map}
+
+ 
+       
+ 
+\section{Boolean Equation}
+	 By solving the given 	K-map diagram we get the boolean equation as follows : $Y = Q \overline{R} + S$
+\section{Truth table for given K-map}
+\begin{tabularx}{0.46\textwidth} { 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X | }
+  \hline
+ P & Q & R & S  & Y\\
+\hline
+0 & 0 & 0 & 0 & 0 \\  
+\hline
+0 & 0 & 0 & 1 & 1 \\ 
+\hline
+0 & 0 & 1 & 0 & 0 \\
+\hline
+0 & 0 & 1 & 1 & 1 \\
+\hline
+0 & 1 & 0 & 0 & 1 \\  
+\hline
+0 & 1 & 0 & 1 & 1 \\ 
+\hline
+0 & 1 & 1 & 0 & 0 \\
+\hline
+0 & 1 & 1 & 1 & 1 \\
+\hline
+1 & 0 & 0 & 0 & 0 \\
+\hline
+1 & 0 & 0 & 1 & 1 \\
+\hline
+1 & 0 & 1 & 0 & 0 \\
+\hline
+1 & 0 & 1 & 1 & 1 \\
+\hline
+1 & 1 & 0 & 0 & 1 \\
+\hline
+1 & 1 & 0 & 1 & 1 \\
+\hline
+1 & 1 & 1 & 0 & 0 \\
+\hline
+1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabularx}
+\begin{center}
+TABLE 1
+\end{center}
+\section{Hardware}
+1. Connect Arduino to the computer and upload the code in to the arduino.
+
+2. Make 2,3,4,5 pins as input pins and 13 pin as output pin. Corresponds to the given inputs linesand  the outputs will be obtained at 10 pin. The builtin led in arduino is the indication of the output.
+\section{Software}
+\textbf{Download the following code}\\
+\begin{center}
+\fbox{\parbox{8.5cm}{\url{https://github.com/likhith1101/fwcassgn}}}
+\end{center}
+\end{document}
+
+   
+ 
