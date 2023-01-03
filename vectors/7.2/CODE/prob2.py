@@ -62,6 +62,6 @@ plt.legend(loc='best')
 plt.grid()
 plt.axis('equal')
 #if using termux
-plt.savefig('/sdcard/download/fwcassgn/trunk/vectors/7.2/linefig.png')
-subprocess.run(shlex.split("termux-open /sdcard/download/fwcassgn/vectors/7.2/linefig.png"))
+plt.savefig('/sdcard/download/fwcassgn/trunk/vectors/7.2/figs/linefig.png')
+subprocess.run(shlex.split("termux-open /sdcard/download/fwcassgn/vectors/7.2/figs/linefig.png"))
 plt.show()
