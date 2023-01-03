@@ -76,6 +76,6 @@ plt.legend(['d1($AB$)='+str(d1),'d2($CD$)='+str(d2),'d3($EF$)='+str(d3)])
 plt.grid()
 plt.axis('equal')
 #if using termux
-plt.savefig('/sdcard/download/fwcassgn/trunk/vectors/7.1/graph.png')
-subprocess.run(shlex.split("termux-open /sdcard/download/fwcassgn/vectors/7.1/graph.png"))
+plt.savefig('/sdcard/download/fwcassgn/trunk/vectors/7.1/figs/graph.png')
+subprocess.run(shlex.split("termux-open /sdcard/download/fwcassgn/vectors/7.1/figs/graph.png"))
 plt.show()
