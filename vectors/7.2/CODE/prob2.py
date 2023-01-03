@@ -24,7 +24,7 @@ def line_gen(P,Q):
 P = np.array(([-1,7]))
 Q = np.array(([4,-3]))
 n=3/2
-R= (Q+n*P)/(1+n) # calculating the coordinate points of R which divides two points
+R= (Q+n*P)/(1+n) # calculating the coordinate points of R which divides the join between the two points
 
 
 print(R)
