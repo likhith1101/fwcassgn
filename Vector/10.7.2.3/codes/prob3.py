@@ -30,8 +30,8 @@ C = np.array(([0,3]))
 P=0.5*(A+B)
 Q=0.5*(B+C)
 R=0.5*(A+C)
-ar1=0.5*(np.linalg.norm((P-Q)@(Q-R)))
-ar2=0.5*(np.linalg.norm((A-B)@(A-C)))
+ar1=0.5*(np.linalg.norm(np.cross((P-Q),(P-R)))
+ar2=0.5*(np.linalg.norm(np.cross((A-B),(A-C))))
 print(str(int(ar1))+':'+str(int(ar2)))
 
 
