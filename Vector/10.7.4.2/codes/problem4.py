@@ -70,6 +70,6 @@ else:
 plt.grid()
 plt.axis('equal')
 #if using termux
-#plt.savefig('/sdcard/download/fwcassgn/trunk/fwcassgn/trunk/vectors/7.2.3/figs/trigraph.png')
-#subprocess.run(shlex.split("termux-open /sdcard/download/fwcassgn/trunk/fwcassgn/trunk/vectors/7.2.3/figs/trigraph.png"))
+plt.savefig('/sdcard/download/fwcassgn/trunk/fwcassgn/trunk/vectors/10.7.4.2/figs/sc1.png')
+subprocess.run(shlex.split("termux-open /sdcard/download/fwcassgn/trunk/fwcassgn/trunk/vectors/10.7.4.2/figs/sc1.png"))
 plt.show()
