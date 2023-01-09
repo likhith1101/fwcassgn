@@ -27,12 +27,24 @@ B = np.array(([1,2]))
 C = np.array(([7,0]))
 
 
-area=0.5*(np.linalg.norm(np.cross((A-B),(A-C))))
+D =A-B
+E =A-C
+print("A transpose")
+print(A.T)
+print("B transpose:")
+print(B.T)
+print("C transpose:")
+print(C.transpose())                        
+print("matrix of transpose")
+F  =np.array(([D,E]))                       
+print(F)
+print("rank of matrix")                      
+print(np.linalg.matrix_rank(F))
 pointsA='x={x:},y={y:}'
-if area==0:
-	print('collinear because ar(ABC) is zero for'+pointsA.format(x=x,y=y))
+if np.linalg.matrix_rank(F)==1:
+	print('collinear because rank(F) is one for'+pointsA.format(x=x,y=y))
 else:
-	print('not collinear because ar(ABC) not equal to zero for'+pointsA.format(x=x,y=y))
+	print('not collinear because rank(F) not equal to one for'+pointsA.format(x=x,y=y))
 
 
 
@@ -63,10 +75,10 @@ for i, txt in enumerate(vert_labels):
 
 plt.xlabel('$x$')                    
 plt.ylabel('$y$')
-if area==0:
-	plt.legend(['ar(ABC) = 0, is collinear for '+pointsA.format(x=x,y=y)])
+if np.linalg.matrix_rank(F)==1:
+	plt.legend(['rank(F) = 1, is collinear for '+pointsA.format(x=x,y=y)])
 else:
-	plt.legend(['ar(ABC) != 0, is not collinear for '+pointsA.format(x=x,y=y)])
+	plt.legend(['rank(F) != 1, is not collinear for '+pointsA.format(x=x,y=y)])
 plt.grid()
 plt.axis('equal')
 #if using termux
