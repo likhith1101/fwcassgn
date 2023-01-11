@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\twocolumn
+\usepackage{graphicx}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{caption} 
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amssymb} % for \because
+\usepackage{amsmath}   % for having text in math mode
+\usepackage{extarrows} % for Row operations arrows
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\lstset{
+  frame=single,
+  breaklines=true
+}
+\usepackage{hyperref}
+  
+%Following 2 lines were added to remove the blank page at the beginning
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+
+%New macro definitions
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\let\vec\mathbf
+
+\begin{document}
+
+\begin{center}
+\title{\textbf{LINE}}
+\date{\vspace{-5ex}} %Not to print date automatically
+\maketitle
+\end{center}
+
+\section{11$^{th}$ Maths - EXERCISE-10.2}
+Q4. Passing through $(2,2\sqrt{3})$ and inclined with the x-axis at an angle of $75^\circ$
+\section{SOLUTION}
+Given points are 
+\begin{align}
+\vec{p}=\myvec{2\\ 2\sqrt{3}},
+m=tan75^\circ=2+\sqrt{3}
+\end{align}
+The line formula in matrix form
+\begin{align}
+\vec{n}^\top\brak{\vec{x}-\vec{p}} &= 0 \\
+n=\myvec{1\\ \frac{1}{m}}
+\end{align}
+\begin{align}
+\begin{pmatrix}
+    1 &\frac{1}{2+\sqrt{3}}\\
+\end{pmatrix}\begin{pmatrix}
+    \vec{x}-\vec{p}\\
+\end{pmatrix}
+\end{align}
+
+\begin{align}
+ \begin{pmatrix}
+    1 & \frac{1}{2+\sqrt{3}}\\
+\end{pmatrix}\begin{pmatrix}
+    x-2\\
+    y-2\sqrt{3}\\
+\end{pmatrix}
+\end{align}
+The required line equation is 
+\begin{align}
+ (2+\sqrt{3})\vec{x}-\vec{y}-4=0
+\end{align} 
+\section{Figure}
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{./figs/line.png}
+\caption{line}
+		\label{fig:Figure}
+\end{figure}
+\end{document}
