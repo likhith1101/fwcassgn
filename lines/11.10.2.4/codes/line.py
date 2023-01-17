@@ -74,8 +74,8 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('/sdcard/download/fwcassgn/trunk/fwcassgn/trunk/lines/11.10.2.4/figs/line.png')
-subprocess.run(shlex.split("termux-open /sdcard/download/fwcassgn/trunk/fwcassgn/trunk/lines/11.10.2.4/figs/line.png"))
+plt.savefig('/sdcard/download/fwcassgn/trunk/fwcassgn/trunk/line/11.10.2.4/figs/line.png')
+subprocess.run(shlex.split("termux-open /sdcard/download/fwcassgn/trunk/fwcassgn/trunk/line/11.10.2.4/figs/line.png"))
 #else
 plt.show()               
 
