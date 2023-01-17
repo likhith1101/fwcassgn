@@ -13,9 +13,9 @@
 
 \begin{document}
 \begin{center}
-\textbf\large{CHAPTER-11 \\ STRAIGHT LINES}
+\textbf\large{CHAPTER-10 \\ STRAIGHT LINES}
 \end{center}
-\section*{Excercise 11.3}
+\section*{Excercise 10.3}
 
 Q3. Reduce the following equations into normal form. Find their perpendicular distances from the origin and angle between perpendicular and the positive $x$-axis.
 \begin{enumerate}
@@ -51,16 +51,22 @@ Q3. Reduce the following equations into normal form. Find their perpendicular di
 			d=\frac{|c|}{\norm{\vec{n}}}=\frac{8}{2}\\
 			=4
 		\end{align}
-
+\begin{figure}[!h]
+	\begin{center} 
+	    \includegraphics[width=\columnwidth]{./figs/line.png}
+	\end{center}
+\caption{}
+\label{fig:Fig}
+\end{figure}
 	
 
 \item From the given equation:
          \begin{align}                                                                                                 \vec{m}&=0\\                                                                        			c&=2
-         \end{align}                                                                                          The directional vector is:
+         \end{align}                                                                                          The directional vector is given by:
           \begin{align}
                   \vec{m}&=\myvec{1\\0\\}
           \end{align}
-          The normal vector is:
+          The normal vector is given by:
                   \begin{align}
          \vec{n}&=\myvec{0\\1\\}\\
           \vec{n}^\top&=\myvec{0 & 1}\\
@@ -72,31 +78,34 @@ Q3. Reduce the following equations into normal form. Find their perpendicular di
                 \end{align}                                                                                 The perpendicular distance from the origin to the line is given by:                                          \begin{align}
 			d=\frac{|c|}{\norm{\vec{n}}}=\frac{2}{1}\\                                                              =2
                   \end{align}
+                  
+                  \begin{figure}[!h]
+	\begin{center} 
+	    \includegraphics[width=\columnwidth]{./figs/line.png}
+	\end{center}
+\caption{}
+\label{fig:Fig}
+\end{figure}
 	
 	
-\item The coordinates are given as
-	\begin{align}
-	\vec{n}&=\myvec{1\\-1\\}\\
-	\vec{n}^\top&=\myvec{1 & -1}\\
-	\vec{n}^\top \vec{X}&= c\\
-	\myvec{1 & -1} \vec{X}&=4\\
-	\norm{\vec{n}}&=\sqrt{\vec{n}^\top.\vec{n}}\\&=\sqrt{\myvec{1&-1}.\myvec{1\\-1\\}}\\&=\sqrt{2}.	
-\end{align}	
-	Divide the above equation(30) by $\sqrt{2}$ on both sides, we get: 
-	\begin{align}
-	\myvec{\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}}\vec{X}=2\sqrt{2}
-	\end{align}
-	The normal form of straight line is given by:
-	\begin{align}
-	\vec{n}&=\myvec{\cos \theta\\\sin\theta\\}\\
-	\vec{n}^\top \vec{X}&= p\\
-	\myvec{\cos\theta & \sin\theta}\vec{X}&=p
-	\end{align}
-	By equating (34) and (37) equations, we get:
-	\begin{align}
-	\theta&=45^\circ\\
-	p&=2\sqrt{2}
-	\end{align}
+\item From the given equation:
+         \begin{align}                                                                                                 \vec{m}&=1\\                                                                        			c&=-4
+         \end{align}                                                                                          The directional vector is given by:
+          \begin{align}
+                  \vec{m}&=\myvec{1\\1\\}
+          \end{align}
+          The normal vector is given by:
+                  \begin{align}
+         \vec{n}&=\myvec{-1\\1\\}\\
+          \vec{n}^\top&=\myvec{-1 & 1}\\
+                       \norm{\vec{n}}&=\sqrt{\vec{n}^\top.\vec{n}}\\
+                          &=\sqrt{2}
+                          \end{align}
+          Slope of normal is given by:
+		\begin{align}                                                                                                 \tan\theta=-\frac{1}{\vec{m}}=-\frac{1}{1}=-1\\                             \theta=315^\circ
+                \end{align}                                                                                 The perpendicular distance from the origin to the line is given by:                                          \begin{align}
+			d=\frac{|c|}{\norm{\vec{n}}}=\frac{4}{\sqrt{2}}\\=2\sqrt{2}                                                      
+                  \end{align}
 
 \begin{figure}[!h]
 	\begin{center} 
