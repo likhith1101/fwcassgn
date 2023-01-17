@@ -37,12 +37,12 @@ plt.plot(x, y, '-r', label='y=2')
 plt.xlabel('x', color='#1C2833')
 plt.ylabel('y', color='#1C2833')
 plt.legend(loc='upper left')
-
-#if using termux
-#plt.savefig('/sdcard/download/fwcassgn/trunk/fwcassgn/trunk/vectors/7.2.3/figs/trigraph.png')
-#subprocess.run(shlex.split("termux-open /sdcard/download/fwcassgn/trunk/fwcassgn/trunk/vectors/7.2.3/figs/trigraph.png"))
-
-
 plt.grid()
+plt.axis('equal')
+#if using termux
+plt.savefig('/sdcard/download/fwcassgn/trunk/fwcassgn/trunk/line/11.10.3.3/figs/line2.png')
+subprocess.run(shlex.split("termux-open /sdcard/download/fwcassgn/trunk/fwcassgn/trunk/line/11.10.3.3/figs/line2.png"))
+
+
 plt.show()
 
