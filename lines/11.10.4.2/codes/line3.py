@@ -27,13 +27,13 @@ x = np.linspace(-5,5,100)
 A=np.array(([0,0]))
 theta1 = np.pi*7/6
 p=1
-B1 = d1*np.array(([np.cos(theta1),np.sin(theta1)]))
+B1 = p*np.array(([np.cos(theta1),np.sin(theta1)]))
 x_AB1=line_gen(A,B1)
 
 plt.plot(x_AB1[0,:],x_AB1[1,:],label='p={}'.format(p))
 sqr_vert = np.vstack((A,B1)).T
 plt.scatter(sqr_vert[0,:],sqr_vert[1,:])
-vert_labels = []
+vert_labels = ['(0,0)']
 
 for i, txt in enumerate(vert_labels):
     plt.annotate(txt,
