@@ -70,13 +70,17 @@ Q3. Reduce the following equations into normal form. Find their perpendicular di
                   \begin{align}
          \vec{n}&=\myvec{0\\1\\}\\
           \vec{n}^\top&=\myvec{0 & 1}\\
-                       \norm{\vec{n}}&=\sqrt{\vec{n}^\top.\vec{n}}\\
-                          &=1
                           \end{align}
           Slope of normal is given by:
-		\begin{align}                                                                                                 \tan\theta=-\frac{1}{\vec{m}}=-\frac{1}{0}=\infty\\                             \theta=90^\circ
-                \end{align}                                                                                 The perpendicular distance from the origin to the line is given by:                                          \begin{align}
-			d=\frac{|c|}{\norm{\vec{n}}}=\frac{2}{1}\\                                                              =2
+		\begin{align}  
+\cos\theta&=\frac{\vec{e}_{1}^\top\vec{n}}{\norm{\vec{e}_{1}}\norm{\vec{n}}}\\
+			&=\frac{\myvec{1&0}\myvec{0 \\ 1\\}}{1}\\
+			&=0\\
+			\implies	\theta&=90^\circ             
+                \end{align}      
+ The perpendicular distance from the origin to the line is given by:    
+                                      \begin{align}
+			d=\frac{|c|}{\norm{\vec{n}}}=2                                                      =2
                   \end{align}
 \\\\\\\\\\\\ 
 \begin{figure}[!h]
@@ -102,9 +106,14 @@ Q3. Reduce the following equations into normal form. Find their perpendicular di
                           &=\sqrt{2}
                           \end{align}
           Slope of normal is given by:
-		\begin{align}                                                                                                 \tan\theta=-\frac{1}{\vec{m}}=-\frac{1}{1}=-1\\                             \theta=315^\circ
-                \end{align}                                                                                 The perpendicular distance from the origin to the line is given by:                                          \begin{align}
-			d=\frac{|c|}{\norm{\vec{n}}}=\frac{4}{\sqrt{2}}\\=2\sqrt{2}                                                      
+		\begin{align}   
+              \cos\theta&=\frac{\vec{e}_{1}^\top\vec{n}}{\norm{\vec{e}_{1}}\norm{\vec{n}}}\\
+			&=\frac{\myvec{1&0}\myvec{-1 \\ 1\\}}{\sqrt{2}}\\
+			&=0\\
+			\implies	\theta&=90^\circ
+                \end{align}                                                                                
+ The perpendicular distance from the origin to the line is given by:                                          \begin{align}
+			d=\frac{|c|}{\norm{\vec{n}}}=2\sqrt{2}                                                    
                   \end{align}
 
 \begin{figure}[!h]
