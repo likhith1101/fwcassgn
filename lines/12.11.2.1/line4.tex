@@ -24,8 +24,17 @@ Q1. Show that the three lines with direction cosines $\frac{12}{13}, \frac{-3}{1
 \begin{enumerate}
 \item Check whether angle between the $\vec{A} \text{ and } \vec{B}$ are mutually perpendicular or not:
 		\begin{align}
-		\vec{A}=\myvec{\frac{12}{13}\\\\\frac{-3}{13}\\\\\frac{-4}{13}\\},\vec{B}=\myvec{\frac{4}{13}\\\\\frac{-3}{13}\\\\\frac{-4}{13}\\}
+		\vec{A}=\myvec{\frac{12}{13}\\\\\frac{-3}{13}\\\\\frac{-4}{13}\\\\},\vec{B}=\myvec{\frac{4}{13}\\\\\frac{12}{13}\\\\\frac{3}{13}\\\\},\vec{C}=\myvec{\frac{3}{13}\\\\\frac{-4}{13}\\\\\frac{12}{13}\\\\}\\
+	\vec{P}=\myvec{\frac{12}{13}&\frac{4}{13}    &\frac{3}{13}\\\\ \frac{-3}{13}&\frac{12}{13}&\frac{-4}{13}\\\\ \frac{-4}{13}&\frac{3}{13}&\frac{12}{13}\\\\},\vec{P}^\top=\myvec{\frac{12}{13}&\frac{-3}{13}   &\frac{-4}{13}\\\\ \frac{4}{13}&\frac{12}{13}&\frac{3}{13}\\\\ \frac{3}{13}&\frac{-4}{13}&\frac{12}{13}\\\\}
 		\end{align}
+	Check whether all three vectors are orthogonal to each other or not using:
+		\begin{align}
+		\vec{P}.\vec{P}^\top=\vec{I}
+		\end{align}
+		\begin{align}
+	\myvec{\frac{12}{13}&\frac{4}{13}    &\frac{3}{13}\\\\ \frac{-3}{13}&\frac{12}{13}&\frac{-4}{13}\\\\ \frac{-4}{13}&\frac{3}{13}&\frac{12}{13}\\\\}.\myvec{\frac{12}{13}&\frac{-3}{13}   &\frac{-4}{13}\\\\ \frac{4}{13}&\frac{12}{13}&\frac{3}{13}\\\\ \frac{3}{13}&\frac{-4}{13}&\frac{12}{13}\\\\}=\myvec{1&0&0\\0&1&0\\0&0&1}
+		\end{align}
+		Hence, all three lines are perpendicular to each other.
 	Angle between the vectors is given by:
 		\begin{align}
 			\cos\theta_1&=\frac{\vec{A}^\top\vec{B}}{\norm{\vec{A}}\norm{\vec{B}}}\\
