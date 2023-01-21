@@ -21,50 +21,21 @@
 Q1. Show that the three lines with direction cosines $\frac{12}{13}, \frac{-3}{13}, \frac{-4}{13}; \frac{4}{13}, \frac{12}{13}, \frac{3}{13}; \frac{3}{13}, \frac{-4}{13}, \frac{12}{13}$ are mutually perpendicular.
 \\
 \solution
-\begin{enumerate}
-\item Check whether angle between the $\vec{A} \text{ and } \vec{B}$ are mutually perpendicular or not:
 		\begin{align}
-		\vec{A}=\myvec{\frac{12}{13}\\\\\frac{-3}{13}\\\\\frac{-4}{13}\\\\},\vec{B}=\myvec{\frac{4}{13}\\\\\frac{12}{13}\\\\\frac{3}{13}\\\\},\vec{C}=\myvec{\frac{3}{13}\\\\\frac{-4}{13}\\\\\frac{12}{13}\\\\}\\
-	\vec{P}=\myvec{\frac{12}{13}&\frac{4}{13}    &\frac{3}{13}\\\\ \frac{-3}{13}&\frac{12}{13}&\frac{-4}{13}\\\\ \frac{-4}{13}&\frac{3}{13}&\frac{12}{13}\\\\},\vec{P}^\top=\myvec{\frac{12}{13}&\frac{-3}{13}   &\frac{-4}{13}\\\\ \frac{4}{13}&\frac{12}{13}&\frac{3}{13}\\\\ \frac{3}{13}&\frac{-4}{13}&\frac{12}{13}\\\\}
+		\vec{A}=\myvec{\frac{12}{13}\\\\\frac{-3}{13}\\\\\frac{-4}{13}\\\\},\vec{B}=\myvec{\frac{4}{13}\\\\\frac{12}{13}\\\\\frac{3}{13}\\\\},\vec{C}=\myvec{\frac{3}{13}\\\\\frac{-4}{13}\\\\\frac{12}{13}\\\\}
 		\end{align}
-	Check whether all three vectors are orthogonal to each other or not using:
+			Stack all three vectors into a single vector $\vec{P}$:
+			\begin{align}
+	\vec{P}=\myvec{\frac{12}{13}&\frac{4}{13}    &\frac{3}{13}\\\\ \frac{-3}{13}&\frac{12}{13}&\frac{-4}{13}\\\\ \frac{-4}{13}&\frac{3}{13}&\frac{12}{13}\\\\}, \vec{P}^\top=\myvec{\frac{12}{13}&\frac{-3}{13}   &\frac{-4}{13}\\\\ \frac{4}{13}&\frac{12}{13}&\frac{3}{13}\\\\ \frac{3}{13}&\frac{-4}{13}&\frac{12}{13}\\\\}
+		\end{align}
+	Check whether all three vectors are orthogonal(perpendicular) to each other or not using:
 		\begin{align}
 		\vec{P}.\vec{P}^\top=\vec{I}
 		\end{align}
 		\begin{align}
 	\myvec{\frac{12}{13}&\frac{4}{13}    &\frac{3}{13}\\\\ \frac{-3}{13}&\frac{12}{13}&\frac{-4}{13}\\\\ \frac{-4}{13}&\frac{3}{13}&\frac{12}{13}\\\\}.\myvec{\frac{12}{13}&\frac{-3}{13}   &\frac{-4}{13}\\\\ \frac{4}{13}&\frac{12}{13}&\frac{3}{13}\\\\ \frac{3}{13}&\frac{-4}{13}&\frac{12}{13}\\\\}=\myvec{1&0&0\\0&1&0\\0&0&1}
 		\end{align}
-		Hence, all three lines are perpendicular to each other.
-	Angle between the vectors is given by:
-		\begin{align}
-			\cos\theta_1&=\frac{\vec{A}^\top\vec{B}}{\norm{\vec{A}}\norm{\vec{B}}}\\
-			&=\frac{\myvec{\frac{12}{13}&\frac{-3}{13}&\frac{-4}{13}}\myvec{\frac{4}{13}\\\\\frac{-3}{13}\\\\\frac{-4}{13}\\}}{1}\\
-			&=0\\
-			\implies \theta_1&=90\degree
-		\end{align}
-	\item Check whether angle between the $\vec{B} \text{ and } \vec{C}$ are mutually perpendicular or not:
-                  \begin{align}
-  \vec{B}=\myvec{\frac{4}{13}\\\\\frac{-3}{13}\\\\\frac{-4}{13}\\},\vec{C}=\myvec{\frac{3}{13}\\\\\frac{-4}{13}\\\\\frac{-12}{13}\\}
-		  \end{align}
-Angle between the vectors is given by:
-\begin{align}
-                          \cos\theta_2&=\frac{\vec{B}^\top\vec{C}}{\norm{\vec{B}}\norm{\vec{C}}}\\
-        &=\frac{\myvec{\frac{4}{13}&\frac{-3}{13}&\frac{-4}{13}}\myvec{\frac{3}{13}\\\\\frac{-4}{13}\\\\\frac{-12}{13}\\}}{1}\\
-                          &=0\\
-		  \implies \theta_2&=90\degree
-		  \end{align}
-	  \item Check whether angle between the $\vec{A} \text{ and } \vec{C}$ are mutually perpendicular or not:
-                   \begin{align}
-    \vec{A}&=\myvec{\frac{12}{13}\\\\\frac{-3}{13}\\\\\frac{-4}{13}\\}, \vec{C}=\myvec{\frac{3}{13}\\\\\frac{-4}{13}\\\\\frac{-12}{13}\\}    
-		   \end{align}
-	Angle between the vectors is given by:
-	\begin{align}
-                          \cos\theta_3&=\frac{\vec{A}^\top\vec{C}}{\norm{\vec{A}}\norm{\vec{C}}}\\
-   &=\frac{\myvec{\frac{12}{13}&\frac{-3}{13}&\frac{-4}{13}}\myvec{\frac{3}{13}\\\\\frac{-4}{13}\\\\\frac{-12}{13}\\}}{1}\\                  
-			   &=0\\
-		   \implies \theta_3&=90\degree  
-		   \end{align}
-Hence, all three lines are mutually perpendicualr to each other.
-\end{enumerate}
+		Hence, all three vectors are mutually orthogonal(perpendicular) to each other.
 \end{document}
+
 
