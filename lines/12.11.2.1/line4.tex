@@ -5,6 +5,7 @@
 \usepackage{gensymb}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
+\usepackage{setspace}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
 \providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
@@ -22,18 +23,18 @@ Q1. Show that the three lines with direction cosines $\frac{12}{13}, \frac{-3}{1
 \\
 \solution
 		\begin{align}
-		\vec{A}=\myvec{\frac{12}{13}\\\\\frac{-3}{13}\\\\\frac{-4}{13}\\\\},\vec{B}=\myvec{\frac{4}{13}\\\\\frac{12}{13}\\\\\frac{3}{13}\\\\},\vec{C}=\myvec{\frac{3}{13}\\\\\frac{-4}{13}\\\\\frac{12}{13}\\\\}
+			\vec{A}=\myvec{\frac{12}{13}\\[2pt]\frac{-3}{13}\\[2pt]\frac{-4}{13}},\vec{B}=\myvec{\frac{4}{13}\\[2pt]\frac{12}{13}\\[2pt]\frac{3}{13}},\vec{C}=\myvec{\frac{3}{13}\\[2pt]\frac{-4}{13}\\[2pt]\frac{12}{13}}
 		\end{align}
-			Stack all three vectors into a single vector $\vec{P}$:
+			Stack all three vectors into a single matrix $\vec{P}$:
 			\begin{align}
-	\vec{P}=\myvec{\frac{12}{13}&\frac{4}{13}    &\frac{3}{13}\\\\ \frac{-3}{13}&\frac{12}{13}&\frac{-4}{13}\\\\ \frac{-4}{13}&\frac{3}{13}&\frac{12}{13}\\\\}, \vec{P}^\top=\myvec{\frac{12}{13}&\frac{-3}{13}   &\frac{-4}{13}\\\\ \frac{4}{13}&\frac{12}{13}&\frac{3}{13}\\\\ \frac{3}{13}&\frac{-4}{13}&\frac{12}{13}\\\\}
-		\end{align}
+				\vec{P}=\myvec{\frac{12}{13}&\frac{4}{13}    &\frac{3}{13}\\[2pt] \frac{-3}{13}&\frac{12}{13}&\frac{-4}{13}\\[2pt] \frac{-4}{13}&\frac{3}{13}&\frac{12}{13}}, \vec{P}^\top=\myvec{\frac{12}{13}&\frac{-3}{13}   &\frac{-4}{13}\\[2pt] \frac{4}{13}&\frac{12}{13}&\frac{3}{13}\\[2pt] \frac{3}{13}&\frac{-4}{13}&\frac{12}{13}}
+			\end{align}
 	Check whether all three vectors are orthogonal(perpendicular) to each other or not using:
 		\begin{align}
-		\vec{P}.\vec{P}^\top=\vec{I}
+		\vec{P}\vec{P}^\top=\vec{I}
 		\end{align}
 		\begin{align}
-	\myvec{\frac{12}{13}&\frac{4}{13}    &\frac{3}{13}\\\\ \frac{-3}{13}&\frac{12}{13}&\frac{-4}{13}\\\\ \frac{-4}{13}&\frac{3}{13}&\frac{12}{13}\\\\}.\myvec{\frac{12}{13}&\frac{-3}{13}   &\frac{-4}{13}\\\\ \frac{4}{13}&\frac{12}{13}&\frac{3}{13}\\\\ \frac{3}{13}&\frac{-4}{13}&\frac{12}{13}\\\\}=\myvec{1&0&0\\0&1&0\\0&0&1}
+			\myvec{\frac{12}{13}&\frac{4}{13}    &\frac{3}{13}\\[2pt] \frac{-3}{13}&\frac{12}{13}&\frac{-4}{13}\\[2pt] \frac{-4}{13}&\frac{3}{13}&\frac{12}{13}}\myvec{\frac{12}{13}&\frac{-3}{13}   &\frac{-4}{13}\\[2pt] \frac{4}{13}&\frac{12}{13}&\frac{3}{13}\\[2pt] \frac{3}{13}&\frac{-4}{13}&\frac{12}{13}}=\myvec{1&0&0\\[2pt]0&1&0\\[2pt]0&0&1}
 		\end{align}
 		Hence, all three vectors are mutually orthogonal(perpendicular) to each other.
 \end{document}
