@@ -22,19 +22,27 @@
 Q1. Show that the three lines with direction cosines $\frac{12}{13}, \frac{-3}{13}, \frac{-4}{13}; \frac{4}{13}, \frac{12}{13}, \frac{3}{13}; \frac{3}{13}, \frac{-4}{13}, \frac{12}{13}$ are mutually perpendicular.
 \\
 \solution
-		\begin{align}
+	\begin{align}
 			\vec{A}=\myvec{\frac{12}{13}\\[2pt]\frac{-3}{13}\\[2pt]\frac{-4}{13}},\vec{B}=\myvec{\frac{4}{13}\\[2pt]\frac{12}{13}\\[2pt]\frac{3}{13}},\vec{C}=\myvec{\frac{3}{13}\\[2pt]\frac{-4}{13}\\[2pt]\frac{12}{13}}
 		\end{align}
 		Stack all three vectors into a single matrix $\vec{P}$:
 			\begin{align}
 		\vec{P}=\myvec{\frac{12}{13}&\frac{4}{13}    &\frac{3}{13}\\[2pt] \frac{-3}{13}&\frac{12}{13}&\frac{-4}{13}\\[2pt] \frac{-4}{13}&\frac{3}{13}&\frac{12}{13}}, \vec{P}^\top=\myvec{\frac{12}{13}&\frac{-3}{13}   &\frac{-4}{13}\\[2pt] \frac{4}{13}&\frac{12}{13}&\frac{3}{13}\\[2pt] \frac{3}{13}&\frac{-4}{13}&\frac{12}{13}}
 			\end{align}
+			\begin{enumerate}
+				\item Check whether all three vectors are orthogonal to each other or not using: 
 			\begin{align}
-	\vec{P}\vec{P}^\top&=\vec{I}
-			\end{align}				\begin{align}
+		\vec{P}\vec{P}^\top=\vec{I}\\
 				\myvec{\frac{12}{13}&\frac{4}{13}    &\frac{3}{13}\\[2pt] \frac{-3}{13}&\frac{12}{13}&\frac{-4}{13}\\[2pt] \frac{-4}{13}&\frac{3}{13}&\frac{12}{13}}\myvec{\frac{12}{13}&\frac{-3}{13}   &\frac{-4}{13}\\[2pt] \frac{4}{13}&\frac{12}{13}&\frac{3}{13}\\[2pt] \frac{3}{13}&\frac{-4}{13}&\frac{12}{13}}&=\myvec{1&0&0\\[2pt]0&1&0\\[2pt]0&0&1}=\vec{I}
 		\end{align}
-		Hence, all three vectors are mutually orthogonal(perpendicular) to each other.
+	\item Check whether all three vectors are orthogonal to each other or not using:
+\begin{align}
+	\vec{P}^\top\vec{P}=\vec{I}\\
+				\myvec{\frac{12}{13}&\frac{-3}{13}    &\frac{-4}{13}\\[2pt] \frac{4}{13}&\frac{12}{13}&\frac{3}{13}\\[2pt] \frac{3}{13}&\frac{-4}{13}&\frac{12}{13}}\myvec{\frac{12}{13}&\frac{4}{13}   &\frac{3}{13}\\[2pt] \frac{-3}{13}&\frac{12}{13}&\frac{-4}{13}\\[2pt] \frac{-4}{13}&\frac{3}{13}&\frac{12}{13}}&=\myvec{1&0&0\\[2pt]0&1&0\\[2pt]0&0&1}=\vec{I}
+		\end{align}
+					Hence, it satisfies the above conditions, that all three vectors are orthogonal(perpendicular) to each other.
+			\end{enumerate}
 \end{document}
+
 
 
