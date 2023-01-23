@@ -11,7 +11,7 @@ print((P.T)@P)
 print((P@(P.T))
 
 if (P@(P.T)==I).all() and  ((P.T)@P==I).all():
-    print('Hence, it stasifies both conditions, shows that all three vectors are orthogonal to each other')
+    print('Hence, it stasifies both the conditions, shows that all three vectors are orthogonal to each other')
 else:
     print('Not orthogonal')
 
