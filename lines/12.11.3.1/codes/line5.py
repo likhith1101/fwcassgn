@@ -8,4 +8,4 @@ magn=np.linalg.norm(n)
 
 
 #distance from origin
-print(c/magn)	
+print(abs(c)/magn)	
