@@ -45,5 +45,6 @@ plt.ylabel('$y-axis$')
 plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
-plt.savefig('/sdcard/download/fwcassgn/trunk/fwcassgn/trunk/circles/11.11.1.2/circle.png')
+plt.savefig('/sdcard/download/fwcassgn/trunk/fwcassgn/trunk/circles/11.11.1.2/figs/circle.png')
 plt.show()
+
