@@ -38,17 +38,9 @@ def line_dir_pt(m,A,k1,k2):
     temp1 = A + lam_1[i]*m
     x_AB[:,i]= temp1.T
   return x_AB
-  
 
 
-#input parameters
-r = 1
-P= np.zeros(2)
-O=  np.array(([r,0])) #normal vector
-
-
-
-
+r=1
 alphadeg = 180
 alpha= alphadeg*np.pi/180
 ac = 2*r*np.sin(alpha/2)
@@ -85,16 +77,10 @@ angle=mp.acos(x)*(180/np.pi)
 print(angle)
 
 
+O=  np.array(([r,0]))
 
-
-##Generating the line 
-I = np.eye(2)
-e1 = I[:,0]
-
-m = e1
-k1 = -2
-k2 = 2
-xline = line_dir_pt(m,O,k1,k2)
+##Generating the line
+P= np.zeros(2)
 xCP = line_gen(C,P)
 xOB = line_gen(O,B)
 xOA = line_gen(O,A)
@@ -105,12 +91,11 @@ xAD = line_gen(A,D)
 x_circ= circ_gen(O,r)
 
 #Plotting all lines
-plt.plot(xline[0,:],xline[1,:],label='Axis')
-plt.plot(xCP[0,:],xCP[1,:],label='Diameter')
-plt.plot(xOA[0,:],xOA[1,:],label='Radius')
-plt.plot(xOB[0,:],xOB[1,:],label='Radius')
-plt.plot(xCD[0,:],xCD[1,:],label='Chord')
-plt.plot(xAD[0,:],xAD[1,:],label='Chord')
+plt.plot(xCP[0,:],xCP[1,:],label='CP')
+plt.plot(xOA[0,:],xOA[1,:],label='OA')
+plt.plot(xOB[0,:],xOB[1,:],label='OB')
+plt.plot(xCD[0,:],xCD[1,:],label='CD')
+plt.plot(xAD[0,:],xAD[1,:],label='AD')
 
 #Plotting the circle
 plt.plot(x_circ[0,:],x_circ[1,:],label='Circle')
@@ -129,7 +114,7 @@ for i, txt in enumerate(vert_labels):
 
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.legend(loc='best')
+#plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
 
