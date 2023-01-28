@@ -39,7 +39,7 @@ def line_dir_pt(m,A,k1,k2):
     x_AB[:,i]= temp1.T
   return x_AB
 
-
+#input parameters 
 r=1
 O=np.array(([r,0]))                   
 P= np.zeros(2)
