@@ -81,10 +81,10 @@ angle=mp.acos(x)*(180/np.pi)
 print(angle)
 
 
-O=  np.array(([r,0]))
 
-##Generating the line
-P= np.zeros(2)
+
+#Generating the line
+
 xCP = line_gen(C,P)
 xOB = line_gen(O,B)
 xOA = line_gen(O,A)
