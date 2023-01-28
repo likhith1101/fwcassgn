@@ -33,20 +33,15 @@ Q1. In Figure 1. $\vec{A,B,C}$ are the three points with centre $\vec{O}$ such t
     \begin{tabular}{|l|c|c|c|c|c|c} \hline \textbf{Symbol}
   & \textbf{value} & \textbf{Description} \\
  \hline
+	    r &1 unit& Radius of OA and OB\\ \hline
 	    $\vec{O}$ &(1,0) & Centre of the circle\\ \hline
-POC &2 units& Diameter of the circle\\ \hline
-	 r &1 unit& Radius of OA and OB\\ \hline
-	    chord1  &$\vec{A}(1,1) \text{ and } \vec{D}(0.5,-0.86)$ & Chord of AD \\ \hline
-	    chord2  &$\vec{C}(2,0) \text{ and } \vec{D}(0.5,-0.86)$ & Chord of CD \\ \hline
+	    $\vec{P}$ &(0,0) & It is a point on the circle forms a diameter\\\hline
 	    $\alpha$ & 180\degree&Angle between vectors $\vec{P} \text{ and } \vec{C}$ \\ \hline
 	    $\beta$ & 90\degree&Angle between vectors $\vec{P} \text{ and } \vec{A}$ \\ \hline
 	    $\gamma$ & 300\degree&Angle between vectors $\vec{P} \text{ and } \vec{D}$ \\ \hline
+	    $\phi$ & 150\degree&Angle between vectors $\vec{P} \text{ and } \vec{B}$ \\ \hline
 
-	    $\angle$BOC &30\degree & Angle between vectors $\vec{B} \text{ and } \vec{C}$  \\ \hline
-	    $\angle$AOB&60\degree&Angle between vectors $\vec{A} \text{ and } \vec{B}$\\
-	\hline
-	    $\angle$ADC&??&Angle between vectors $\vec{A} \text{ and } \vec{C}$ \\
-	\hline
+	    $\vec{C},\vec{A},\vec{D},\vec{B}$ &(2,0), (1,1), (0.5,-0.86), (1.86,0.5) & Points obtained from $\alpha$,$\beta$,$\gamma$,$\phi$\\ \hline
 \end{tabular}   
 \end{center}
 \caption{\label{table:dummytable} }
@@ -74,25 +69,25 @@ From assumptions the vector points $\vec{C,A,D}$ be
 Let AC be the chord that subtends angles at the center $\vec{O}$ and at point $\vec{D}$. The cosine of the angle subtended at point $\vec{D}$ is given by
 \begin{align}
 	\cos(\angle ADC) = \frac{\vec{(A-D)^\top(C-D)}}{\norm{\vec{A-D}}\norm{\vec{C-D}}}
-	\label{pf2-eq-3}
+	\label{eq:3}
 \end{align}
 Where
  \begin{align}
 	 \vec{A-D}& = \myvec{\cos\beta - \cos\gamma\\\sin\beta - \sin\gamma},
 	 \vec{C-D} = \myvec{\cos\alpha - \cos\gamma\\\sin\alpha - \sin\gamma}\\
-	 \label{pf2-eq-5} \vec{(A-D)^\top(C-D)}&= 4\sin\frac{\alpha-\gamma}2\sin\frac{\beta-\gamma}2\cos\frac{\alpha-\beta}2\\
+	 \label{eq:5} \vec{(A-D)^\top(C-D)}&= 4\sin\frac{\alpha-\gamma}2\sin\frac{\beta-\gamma}2\cos\frac{\alpha-\beta}2\\
 	 \norm{\vec{A-D}}\norm{\vec{C-D}}& = 4 \sin\frac{\alpha-\gamma}2\sin\frac{\beta-\gamma}2
-	\label{pf2-eq-6}
+	\label{eq:6}
 \end{align}
-Substituting (\ref{pf2-eq-5}) and (\ref{pf2-eq-6}) in (\ref{pf2-eq-3}),
+Substituting \eqref{eq:5} and \eqref{eq:6} in \eqref{eq:3},
 \begin{align}
 	\cos(\angle ADC) &= \frac{4\sin\frac{\alpha-\gamma}{2}\sin\frac{\beta-\gamma}{2}\cos\frac{\alpha-\beta}{2}}{4 \sin\frac{\alpha-\gamma}2\sin\frac{\beta-\gamma}2}\\
 	\cos(\angle ADC) &= \cos\frac{\alpha-\beta}{2}
-	\label{pf2-eq-11}
+	\label{eq:11}
 \end{align}
-By substituting $\alpha$ and $\beta$ values in (\ref{pf2-eq-11})
+By substituting $\alpha$ and $\beta$ values in \eqref{eq:11}
 \begin{align}
-\angle ADC = \frac{\alpha-\beta}{2}=\frac{(180^\circ - 90^\circ )}{2}=45^\circ
+\angle ADC = \frac{\alpha-\beta}{2}=\frac{(180\degree - 90\degree )}{2}=45\degree
 \end{align}
 
 
