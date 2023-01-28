@@ -18,7 +18,7 @@
 \end{center}
 \section*{Excercise 10.5}
 
-Q1. In Figure 1. A,B,C are the three points with centre O such that $\angle$BOC=30$^\circ$ and $\angle$AOB=60$^\circ$.If D is a point on the circle other than the arc ABC, find $\angle$ADC
+Q1. In Figure 1. $\vec{A,B,C}$ are the three points with centre $\vec{O}$ such that $\angle$BOC=30\degree and $\angle$AOB=60\degree. If $\vec{D}$ is a point on the circle other than the arc ABC, find $\angle$ADC
 \section*{\large Solution}
 \begin{figure}[h!]
 \centering
@@ -33,13 +33,17 @@ Q1. In Figure 1. A,B,C are the three points with centre O such that $\angle$BOC=
     \begin{tabular}{|l|c|c|c|c|c|c} \hline \textbf{Symbol}
   & \textbf{value} & \textbf{Description} \\
  \hline
-	    O &(1,0) & Centre \\ \hline
-POC &2 units& Diameter\\ \hline
-	 OA and OB &1 unit& Radius\\ \hline
- AD  &A(1,1) and D(0.5,-0.86) & Chord of AD \\ \hline
-CD  &C(2,0) and D(0.5,-0.86) & Chord of CD \\ \hline
-$\angle$BOC &30$^\circ$ & Angle between vectors B and C  \\ \hline
-$\angle$AOB&60$^\circ$&Angle between vectors A and B\\
+	    $\vec{O}$ &(1,0) & Centre of the circle\\ \hline
+POC &2 units& Diameter of the circle\\ \hline
+	 r &1 unit& Radius of OA and OB\\ \hline
+	    chord1  &$\vec{A}(1,1) \text{ and } \vec{D}(0.5,-0.86)$ & Chord of AD \\ \hline
+	    chord2  &$\vec{C}(2,0) \text{ and } \vec{D}(0.5,-0.86)$ & Chord of CD \\ \hline
+	    $\alpha$ & 180\degree&Angle between vectors P and C \\ \hline
+	    $\beta$ & 90\degree&Angle between vectors P and A \\ \hline
+	    $\gamma$ & 300\degree&Angle between vectors P and D \\ \hline
+
+$\angle$BOC &30\degree & Angle between vectors B and C  \\ \hline
+$\angle$AOB&60\degree&Angle between vectors A and B\\
 	\hline
 	$\angle$ADC&??&Angle between vectors A and C \\
 	\hline
@@ -50,44 +54,40 @@ $\angle$AOB&60$^\circ$&Angle between vectors A and B\\
 
 \section*{\large Assumptions}
 \begin{enumerate}
-\item Let P be a point on the circle such that by expandig OC upto P we get diameter POC.
+	\item Let $\vec{P}$ be a point on the circle such that by expandig OC upto $\vec{P}$ we get diameter POC.
 \item To find $\angle$ADC let the circle be unit circle and diameter POC on x axis.
-\item Take three points C,A,D  and $\alpha$,$\beta$,$\gamma$ be three angles made by the points C,A,D with respect to diameter POC.
+\item Take three points $\vec{C,A,D}$ and $\alpha$,$\beta$,$\gamma$ be three angles made by the points $\vec{C,A,D}$ with respect to diameter POC.
 \end{enumerate}
 From the Figure 1:
 \begin{align}
-\vec{\alpha} = \vec{\angle POC}= 180^\circ, 
-\vec{\beta} = \vec{\angle POA} = 90^\circ,
-\vec{\gamma} = \vec{\angle POD}
+\alpha = {\angle POC}= 180\degree, 
+\beta= {\angle POA} = 90\degree,
+\gamma = {\angle POD}=300\degree
 \end{align}
 \section*{Verification:}
-From assumptions the vector points C,A,D be
+From assumptions the vector points $\vec{C,A,D}$ be
 \begin{align}
-	\vec{C} = \myvec{cos\alpha\\sin\alpha},
-	\vec{A} = \myvec{cos\beta\\sin\beta},
-	\vec{D} = \myvec{cos\gamma\\sin\gamma}
+	\vec{C} = \myvec{\cos\alpha\\\sin\alpha},
+	\vec{A} = \myvec{\cos\beta\\\sin\beta},
+	\vec{D} = \myvec{\cos\gamma\\\sin\gamma}
 \end{align}
-Let AC be the chord that subtends angles at the center O and at point D. The cosine of the angle subtended at point D is given by
+Let AC be the chord that subtends angles at the center $\vec{O}$ and at point $\vec{D}$. The cosine of the angle subtended at point $\vec{D}$ is given by
 \begin{align}
-	cos(\angle ADC) = \frac{(A-D)^T(C-D)}{\norm{A-D}\norm{C-D}}
+	\cos(\angle ADC) = \frac{\vec{(A-D)^\top(C-D)}}{\norm{\vec{A-D}}\norm{\vec{C-D}}}
 	\label{pf2-eq-3}
 \end{align}
 Where
  \begin{align}
-	\vec{A-D} = \myvec{cos\beta - cos\gamma\\sin\beta - sin\gamma},
-	\vec{C-D} = \myvec{cos\alpha - cos\gamma\\sin\alpha - sin\gamma}\\
-	(A-D)^T(C-D)=\myvec{cos\beta - cos\gamma  sin\beta - sin\gamma}\\
+	 \vec{A-D}& = \myvec{\cos\beta - \cos\gamma\\\sin\beta - \sin\gamma},
+	 \vec{C-D} = \myvec{\cos\alpha - \cos\gamma\\\sin\alpha - \sin\gamma}\\
+	 \label{pf2-eq-5} \vec{(A-D)^\top(C-D)}&= 4\sin\frac{\alpha-\gamma}2\sin\frac{\beta-\gamma}2\cos\frac{\alpha-\beta}2\\
+	 \norm{\vec{A-D}}\norm{\vec{C-D}}& = 4 \sin\frac{\alpha-\gamma}2\sin\frac{\beta-\gamma}2
 	\label{pf2-eq-6}
-	= 4\sin\frac{\alpha-\gamma}2\sin\frac{\beta-\gamma}2\cos\frac{\alpha-\beta}2\\
-	\norm{A-D}^2\norm{C-D}^2 = ((\cos\alpha-\cos\gamma)^2+(\sin\alpha-\sin\gamma)^2)\\
-	= 16 \sin^2\frac{\alpha-\gamma}2\sin^2\frac{\beta-\gamma}2\\
-	\norm{A-D}\norm{C-D} = 4 \sin\frac{\alpha-\gamma}2\sin\frac{\beta-\gamma}2
-	\label{pf2-eq-9}
 \end{align}
-Substituting (\ref{pf2-eq-6}) and (\ref{pf2-eq-9}) in (\ref{pf2-eq-3}),
+Substituting (\ref{pf2-eq-5}) and (\ref{pf2-eq-6}) in (\ref{pf2-eq-3}),
 \begin{align}
-	cos(\angle ADC) &= \frac{4sin\frac{\alpha-\gamma}{2}sin\frac{\beta-\gamma}{2}cos\frac{\alpha-\beta}{2}}{4 \sin\frac{\alpha-\gamma}2\sin\frac{\beta-\gamma}2}\\
-	cos(\angle ADC) &= cos\frac{\alpha-\beta}{2}
+	\cos(\angle ADC) &= \frac{4\sin\frac{\alpha-\gamma}{2}\sin\frac{\beta-\gamma}{2}\cos\frac{\alpha-\beta}{2}}{4 \sin\frac{\alpha-\gamma}2\sin\frac{\beta-\gamma}2}\\
+	\cos(\angle ADC) &= \cos\frac{\alpha-\beta}{2}
 	\label{pf2-eq-11}
 \end{align}
 By substituting $\alpha$ and $\beta$ values in (\ref{pf2-eq-11})
