@@ -41,6 +41,10 @@ def line_dir_pt(m,A,k1,k2):
 
 
 r=1
+O=np.array(([r,0]))                   
+P= np.zeros(2)
+
+
 alphadeg = 180
 alpha= alphadeg*np.pi/180
 ac = 2*r*np.sin(alpha/2)
@@ -51,13 +55,13 @@ beta = betadeg*np.pi/180
 ad = 2*r*np.sin(beta/2)
 A =  np.array(([ad*np.sin(beta/2),ad*np.cos(beta/2)]))
 
-
+print(A)
 
 gammadeg = 300
 gamma = gammadeg*np.pi/180
 ab = 2*r*np.sin(gamma/2)
 D =  np.array(([ab*np.sin(gamma/2),ab*np.cos(gamma/2)]))
-
+print(D)
 phydeg = 150
 phy = phydeg*np.pi/180
 ad = 2*r*np.sin(phy/2)
