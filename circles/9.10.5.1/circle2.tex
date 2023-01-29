@@ -10,7 +10,22 @@
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \let\vec\mathbf
-
+\def\inputGnumericTable{}
+\usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}
+\usepackage{array}
+\usepackage{amsmath}   % for having text in math mode
+\usepackage{listings}
+\lstset{
+language=tex,
+frame=single, 
+breaklines=true
+}
 \begin{document}
 \begin{center}
 \textbf\large{CLASS-9\\CHAPTER-10 \\ CIRCLES}
@@ -18,46 +33,37 @@
 \end{center}
 \section*{Excercise 10.5}
 
-Q1. In Figure 1. $\vec{A,B,C}$ are the three points with centre $\vec{O}$ such that $\angle$BOC=30\degree and $\angle$AOB=60\degree. If $\vec{D}$ is a point on the circle other than the arc ABC, find $\angle$ADC
+Q1. In Figure 1. $\vec{A},\vec{B},\vec{C}$ are the three points with centre $\vec{O}$ such that $\angle$ BOC=30\degree and $\angle$ AOB=60\degree. If $\vec{D}$ is a point on the circle other than the arc ABC, find $\angle$ADC
 \section*{\large Solution}
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\columnwidth]{figs/circle2.png}
 \caption{}
+\label{fig:Fig1}
 \end{figure}
 \section*{\large Construction}
 
-
-\begin{table}[htbp]
- \begin{center}
-    \begin{tabular}{|l|c|c|c|c|c|c} \hline \textbf{Symbol}
-  & \textbf{value} & \textbf{Description} \\
- \hline
-	    r &1 unit& Radius of OA and OB\\ \hline
-	    $\vec{O}$ &\myvec{0\\r} & Centre of the circle\\ \hline
-	    $\vec{C}$ &\myvec{1\\0} & Standard basis vector $\vec{e}_1$\\ \hline
-	    $\alpha$ & 30\degree&Angle between vectors $\vec{B} \text{ and } \vec{C}$ w.r.t $\vec{O}$ \\ \hline
-	    $\beta$ & 60\degree&Angle between vectors $\vec{A} \text{ and } \vec{B}$ w.r.t $\vec{O}$ \\ \hline
-	    $\gamma$ & ??&Angle between vectors $\vec{A} \text{ and } \vec{C}$ w.r.t $\vec{D}$ \\ \hline
-\end{tabular}   
-\end{center}
-\caption{\label{table:dummytable} }
+\begin{table}[ht!]
+\input{tables/table1.tex}
+\caption{}
+\label{Table-1} 
 \end{table}
+
 
 \section*{\large Assumptions}
 \begin{enumerate}
 	\item Let $\vec{P}$ be a point on the circle such that by expandig OC upto $\vec{P}$ we get diameter POC.
 \item To find $\angle$ADC let the circle be unit circle and diameter POC on x axis.
-\item Take three points $\vec{C,A,D}$ and $\alpha$,$\beta$,$\gamma$ be three angles made by the points $\vec{C,A,D}$ with respect to diameter POC.
+\item Take three points $\vec{C},\vec{A},\vec{D}$ and $\alpha$,$\beta$,$\gamma$ be three angles made by the points $\vec{C},\vec{A},\vec{D}$ with respect to diameter POC.
 \end{enumerate}
-From the Figure 1:
+From the Figure \ref{fig:Fig1}:
 \begin{align}
 \alpha = {\angle POC}= 180\degree, 
 \beta= {\angle POA} = 90\degree,
 \gamma = {\angle POD}=300\degree
 \end{align}
 \section*{Verification:}
-From assumptions the vector points $\vec{C,A,D}$ be
+From assumptions the vector points $\vec{C},\vec{A},\vec{D}$ be
 \begin{align}
 	\vec{C} = \myvec{\cos\alpha\\\sin\alpha},
 	\vec{A} = \myvec{\cos\beta\\\sin\beta},
