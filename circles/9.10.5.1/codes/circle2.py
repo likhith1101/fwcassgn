@@ -39,33 +39,32 @@ def line_dir_pt(m,A,k1,k2):
     x_AB[:,i]= temp1.T
   return x_AB
 
-#input parameters 
+I = np.eye(2)
+e1 = I[:,0]
+
 r=1
-O=np.array(([r,0]))                   
-P= np.zeros(2)
+O=np.array(([0,0]))  
 
+C=e1
 
-alphadeg = 180
+alphadeg = 30
 alpha= alphadeg*np.pi/180
 ac = 2*r*np.sin(alpha/2)
-C =  np.array(([ac*np.sin(alpha/2),ac*np.cos(alpha/2)]))
+B =  np.array(([np.cos(alpha),np.sin(alpha)]))
 
-betadeg = 90
-beta = betadeg*np.pi/180
-ad = 2*r*np.sin(beta/2)
-A =  np.array(([ad*np.sin(beta/2),ad*np.cos(beta/2)]))
+betadeg = 60
+phideg = alphadeg+betadeg
+phi = phideg*np.pi/180
+ab = 2*r*np.sin(phi/2)
+A=  np.array(([int(np.cos(phi)),int(np.sin(phi))]))
 
-print(A)
-
-gammadeg = 300
+gammadeg = 45
 gamma = gammadeg*np.pi/180
-ab = 2*r*np.sin(gamma/2)
-D =  np.array(([ab*np.sin(gamma/2),ab*np.cos(gamma/2)]))
-print(D)
-phydeg = 150
-phy = phydeg*np.pi/180
-ad = 2*r*np.sin(phy/2)
-B =  np.array(([ad*np.sin(phy/2),ad*np.cos(phy/2)]))
+bd = 2*r*np.sin(gamma/2)
+D =  np.array(([-np.cos(gamma),-np.sin(gamma)]))
+
+
+
 
 
 #Proof of the problem
@@ -73,9 +72,8 @@ B =  np.array(([ad*np.sin(phy/2),ad*np.cos(phy/2)]))
 
 m1=A-D
 m2=C-D
-
+y=[]
 x=(m1.transpose()@m2)/(LA.norm(m1) * LA.norm(m2))
-
 angle=mp.acos(x)*(180/np.pi)
 
 print(angle)
@@ -83,11 +81,11 @@ print(angle)
 
 
 
-#Generating the line
+##Generating the li
 
-xCP = line_gen(C,P)
-xOB = line_gen(O,B)
+xOC = line_gen(O,C)
 xOA = line_gen(O,A)
+xOB = line_gen(O,B)
 xCD = line_gen(C,D)
 xAD = line_gen(A,D)
 
@@ -95,9 +93,9 @@ xAD = line_gen(A,D)
 x_circ= circ_gen(O,r)
 
 #Plotting all lines
-plt.plot(xCP[0,:],xCP[1,:],label='CP')
 plt.plot(xOA[0,:],xOA[1,:],label='OA')
 plt.plot(xOB[0,:],xOB[1,:],label='OB')
+plt.plot(xOC[0,:],xOC[1,:],label='OC')
 plt.plot(xCD[0,:],xCD[1,:],label='CD')
 plt.plot(xAD[0,:],xAD[1,:],label='AD')
 
@@ -106,9 +104,9 @@ plt.plot(x_circ[0,:],x_circ[1,:],label='Circle')
 
 
 #Labeling the coordinates
-tri_coords = np.vstack((O,A,B,C,D,P)).T
+tri_coords = np.vstack((O,A,B,C,D)).T
 plt.scatter(tri_coords[0,:], tri_coords[1,:])
-vert_labels = ['O','A','B','C','D','P']
+vert_labels = ['O','A','B','C','D']
 for i, txt in enumerate(vert_labels):
     plt.annotate(txt, # this is the text
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
