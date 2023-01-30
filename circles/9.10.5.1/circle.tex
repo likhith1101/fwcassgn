@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{gensymb}
+
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+\def\inputGnumericTable{}
+\usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}
+\usepackage{array}
+\usepackage{amsmath}   % for having text in math mode
+\usepackage{listings}
+\lstset{
+language=tex,
+frame=single, 
+breaklines=true
+}
+\begin{document}
+\begin{center}
+\textbf\large{CLASS-9\\CHAPTER-10 \\ CIRCLES}
+
+\end{center}
+\section*{Excercise 10.5}
+
+Q1. In Figure 1. $\vec{A},\vec{B},\vec{C}$ are the three points with centre $\vec{O}$ such that $\angle$BOC=30\degree and $\angle$AOB=60\degree. If $\vec{D}$ is a point on the circle other than the arc ABC, find $\angle$ADC
+\section*{\large Solution}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\columnwidth]{figs/circle2.png}
+\caption{}
+\label{fig:Fig1}
+\end{figure}
+\section*{\large Construction}
+
+\begin{table}[h!]
+	\small
+	\centering
+	%\subimport{../tables/}{table1.tex}
+     \input{tables/table1.tex}
+%	\caption{}
+	\label{table:table1}
+	\end{table}
+
+
+
+\section*{Verification:}
+ From assumptions the vector points $\vec{C}$,$\vec{A}$,$\vec{D}$ be
+\begin{align}
+	\vec{C} =\vec{e}_1= \myvec{1\\0},
+	\vec{A} = \myvec{\cos(\alpha+\beta)\\\sin(\alpha+\beta)},
+	\vec{D} = \myvec{\cos\gamma\\\sin\gamma}
+\end{align}
+ The cosine of the angle subtended at point $\vec{D}$ is given by
+\begin{align}
+	\cos(\angle ADC) = \frac{\vec{(A-D)^\top(C-D)}}{\norm{\vec{A-D}}\norm{\vec{C-D}}}
+	\label{eq:2}
+\end{align}
+Where
+ \begin{align}
+	 \vec{A-D}& = \myvec{\cos(\alpha+\beta) - \cos\gamma\\\sin(\alpha+\beta) - \sin\gamma},
+	 \vec{C-D} = \myvec{1 - \cos\gamma\\-\sin\gamma}\\
+	 \label{eq:4} \vec{(A-D)^\top(C-D)}&= 4\sin\frac{\alpha+\gamma}2\sin\frac{\beta+\gamma}2\cos\frac{\alpha+\beta}2\\
+	 \norm{\vec{A-D}}\norm{\vec{C-D}}& = 4 \sin\frac{\alpha+\gamma}2\sin\frac{\beta+\gamma}2
+	\label{eq:5}
+\end{align}
+Substituting \eqref{eq:4} and \eqref{eq:5} in \eqref{eq:2},
+\begin{align}
+	\cos(\angle ADC) &= \frac{4\sin\frac{\alpha+\gamma}{2}\sin\frac{\beta+\gamma}{2}\cos\frac{\alpha+\beta}{2}}{4 \sin\frac{\alpha+\gamma}2\sin\frac{\beta+\gamma}2}\\
+	\cos(\angle ADC) &= \cos\frac{\alpha+\beta}{2}
+	\label{eq:7}
+\end{align}
+By substituting $\alpha$ and $\beta$ values in \eqref{eq:7}
+\begin{align}
+\angle ADC = \frac{\alpha+\beta}{2}=\frac{(30\degree + 60\degree )}{2}=45\degree
+\end{align}
+
+
+
+\end{document}
