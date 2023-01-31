@@ -72,8 +72,7 @@ D =  np.array(([-np.cos(gamma),-np.sin(gamma)]))
 
 m1=A-D
 m2=C-D
-y=[]
-x=(m1.transpose()@m2)/(LA.norm(m1) * LA.norm(m2))
+x=((m1.T)@m2)/(LA.norm(m1) * LA.norm(m2))
 angle=mp.acos(x)*(180/np.pi)
 
 print(angle)
