@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.8)  4 FEB 2023 22:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.8)  4 FEB 2023 23:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -934,10 +934,10 @@ Package rerunfilecheck Info: File `circle3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25409 strings out of 478287
- 494134 string characters out of 5849289
- 991636 words of memory out of 5000000
- 43096 multiletter control sequences out of 15000+600000
+ 25411 strings out of 478287
+ 494147 string characters out of 5849289
+ 992636 words of memory out of 5000000
+ 43098 multiletter control sequences out of 15000+600000
  477601 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,15n,89p,450b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -954,10 +954,10 @@ s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
 m10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb>
-Output written on circle3.pdf (4 pages, 172213 bytes).
+Output written on circle3.pdf (4 pages, 172267 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
+ 161 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
  49 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

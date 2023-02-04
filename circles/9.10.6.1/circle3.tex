@@ -98,27 +98,25 @@ On comparing above two equations with \eqref{eq:3}, we get:
 The intersection of the given conics is obtained
 as
 \begin{align}
-	\vec{x}^{\top}(\vec{V}_1 + \mu\vec{V}_2)\vec{x}+2 (\vec{u}_1+\mu \vec{u}_2)^{\top} \vec{x} + (f_1+\mu f_2)= 0
-\\ \label{eq:9}
-\vec{V}_1+\mu\vec{V}_2= \myvec{
+	\label{eq:8}
+\vec{V}_1+\mu\vec{V}_2&= \myvec{
 \mu+1 & 0\\
 0 & \mu+1
 }
-\\ \label{eq:10}
-\vec{u}_1+\mu\vec{u}_2= \myvec{
+\\ \label{eq:9}
+\vec{u}_1+\mu\vec{u}_2&= \myvec{
 4\\
 0
 }
-\\ \label{eq:11}
-f_1+\mu f_2= -21
+\\ \label{eq:10}
+f_1+\mu f_2&= -21
 \end{align}
 This conic is a single straight line if and only if, 
 \begin{align}
 \mydet{\vec{V}_1 + \mu\vec{V}_2 & \vec{u}_1+\mu \vec{u}_2\\ (\vec{u}_1+\mu \vec{u}_2)^{\top} & f_1 + \mu f_2} &= 0
-\label{eq:12}
+\label{eq:11}
 \end{align}
-Substituting equation \eqref{eq:9},\eqref{eq:10} and \eqref{eq:11} in equation \eqref{eq:12}
-We get,
+Substituting equation \eqref{eq:8},\eqref{eq:9} and \eqref{eq:10} in equation \eqref{eq:11}:
 \begin{align}
 \implies \mydet{1+\mu& 0 & -4\mu\\ 
 0 & 1+\mu & 0 \\
@@ -131,25 +129,31 @@ Solving the above equation we get,
 \end{align}
 Thus, the parameters for a straight line can be expressed as
  \begin{align}
- \label{eq:15}
+ \label{eq:14}
 	\vec{V} &= 
 \vec{V}_1 + \mu\vec{V}_2
 =\myvec{ 0 & 0 \\ 0 & 0},
-\\ \label{eq:16}
+\\ \label{eq:15}
 	\vec{u} &=
 \vec{u}_1+\mu \vec{u}_2
 	= \myvec{
 4\\
 0
 },
-\\ \label{eq:17}
+\\ \label{eq:16}
 f&=f_1 + \mu f_2=-21
 \end{align}
-By substituting \eqref{eq:15},\eqref{eq:16} and \eqref{eq:17} in conic equation, we get:
+The conic equation is given by:
+ \begin{align}
+ \vec{x}^\top\vec{V}\vec{x}+2\vec{u}^\top\vec{x}+f=0, 
+  \label{eq:17}
+ \end{align}
+By substituting \eqref{eq:14},\eqref{eq:15} and \eqref{eq:16} in conic equation \eqref{eq:17}, we get:
 \begin{align}
 \myvec{x&y}\myvec{0&0\\0&0}\myvec{x\\y}+2\myvec{4&0}\myvec{x\\y}-21=0
+\label{eq:18}
 \end{align}
-By solving above equation(18), we get point of contact $\vec{q}$:
+By solving above equation \eqref{eq:18}, we get point of contact $\vec{q}$:
 \begin{align}
 \vec{q}=\myvec{\frac{21}{8}\\[2pt]0}
 \end{align}
@@ -179,9 +183,9 @@ with the conic section, we have:
 \brak{\vec{m}^T\vec{V}\vec{m}}
 }
 }
-\label{eq:22}
+\label{eq:21}
 \end{align}
-On substituting the below values in \eqref{eq:22}
+On substituting the below values in \eqref{eq:21}
 \begin{align}
  \vec{m}=\vec{e}_2,\vec{V}=\vec{I},\vec{u}=\myvec{0\\0},\vec{q}=\myvec{\frac{13}{5}\\[2pt]0},f=-9
 \end{align}
