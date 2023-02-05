@@ -56,7 +56,7 @@ breaklines=true
 \section*{Excercise 10.6}
 
 Q1. Prove that the line of centres of two intersecting circles subtends equal angles at the two points of intersection.
-\section*{\large Solution}
+\section*{\large Solution}:
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\columnwidth]{figs/circle3.png}
@@ -64,7 +64,9 @@ Q1. Prove that the line of centres of two intersecting circles subtends equal an
 \label{fig:Fig1}
 \end{figure}
 
-\section*{\large Construction}
+
+\section*{\large Construction}:
+
 \begin{table}[h!]
 	\small
 	\centering
@@ -72,8 +74,11 @@ Q1. Prove that the line of centres of two intersecting circles subtends equal an
      \input{tables/table1.tex}
 %	\caption{}
 	\label{table:table1}
-	\end{table}
-\section*{Verification:}
+\end{table}
+
+
+\section*{\large Verification:}
+
  The two circle equations are given by:
 \begin{align}
 \label{eq:1}
@@ -148,14 +153,15 @@ The conic equation is given by:
  \vec{x}^\top\vec{V}\vec{x}+2\vec{u}^\top\vec{x}+f=0, 
   \label{eq:17}
  \end{align}
-By substituting \eqref{eq:14},\eqref{eq:15} and \eqref{eq:16} in conic equation \eqref{eq:17}, we get:
+By substituting \eqref{eq:14},\eqref{eq:15} and \eqref{eq:16} in conic equation \eqref{eq:17}, we get point of contact $\vec{q}$::
 \begin{align}
-\myvec{x&y}\myvec{0&0\\0&0}\myvec{x\\y}+2\myvec{4&0}\myvec{x\\y}-21=0
-\label{eq:18}
+	\myvec{x&y}\myvec{0&0\\0&0}\myvec{x\\y}+2\myvec{4&0}\myvec{x\\y}-21&=0\\
+\implies	8x&=21\\
+\implies	x&=\frac{21}{8}
 \end{align}
-By solving above equation \eqref{eq:18}, we get point of contact $\vec{q}$:
-\begin{align}
-\vec{q}=\myvec{\frac{21}{8}\\[2pt]0}
+	The point of contact $\vec{q}$ is given by:
+	\begin{align}
+	\vec{q}&=x\vec{e}_1=\myvec{\frac{21}{8}\\[2pt]0}
 \end{align}
 The points of intersection of line is given by: 
 \begin{align}
@@ -183,9 +189,9 @@ with the conic section, we have:
 \brak{\vec{m}^T\vec{V}\vec{m}}
 }
 }
-\label{eq:21}
+\label{eq:24}
 \end{align}
-On substituting the below values in \eqref{eq:21}
+On substituting the below values in \eqref{eq:24}
 \begin{align}
  \vec{m}=\vec{e}_2,\vec{V}=\vec{I},\vec{u}=\myvec{0\\0},\vec{q}=\myvec{\frac{13}{5}\\[2pt]0},f=-9
 \end{align}
@@ -211,8 +217,8 @@ Check whether the intersection angles $\angle$ADB and $\angle$ACB are equal or n
 \end{align}
 \item Finding $\angle$ACB:
 \begin{align}
-	\vec{A-C} = \myvec{-\frac{21}{8}\\\frac{29}{20}},
-	 \vec{B-C}& = \myvec{\frac{11}{8}\\\frac{29}{20}}\\
+	\vec{A-C} = \myvec{-\frac{21}{8}\\[2pt]\frac{29}{20}},
+	 \vec{B-C}& = \myvec{\frac{11}{8}\\[2pt]\frac{29}{20}}\\
 	 \vec{(A-C)^\top(B-C)}&= -\frac{3}{2}\\
 	 \norm{\vec{A-C}}\norm{\vec{B-C}}& = 6\\
 	 \cos(\angle ACB) &= \frac{\vec{(A-C)^\top(B-C)}}{\norm{\vec{A-C}}\norm{\vec{B-C}}}\\
