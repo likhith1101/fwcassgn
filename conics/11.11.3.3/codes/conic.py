@@ -70,12 +70,12 @@ fl2 = LA.norm(F2)
 m = omat@n
 
 #Points for Ellipse Major Axis
-ellipAxis_A = 2*n
-ellipAxis_B = -2*n
+ellipAxis_A = n
+ellipAxis_B = -n
 
 #Points for Ellipse Minor Axis
-ellipMinorAxis_A = 1.333*m
-ellipMinorAxis_B = -1.33*m
+ellipMinorAxis_A = m/1.33
+ellipMinorAxis_B = -m/1.33
 
 #points for Latus rectum
 lr1_Ay = np.sqrt((-f-lamda[0]*fl1**2)/lamda[1])
