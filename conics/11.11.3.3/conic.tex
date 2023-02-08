@@ -43,104 +43,71 @@
 \setcounter{page}{1}
 
 \section{11$^{th}$ Maths - Chapter 11}
-This is Problem-1 from Exercise 11.3
+This is Problem-3 from Exercise 11.3
 \begin{enumerate}
-	\item Find the coordinates of the focii, the vertices, the length of major and minor axes, the eccentricity and the length of the latus rectum of an ellipse whose equation is given by $\frac{x^2}{16}+\frac{y^2}{9} = 1$. \\ 
-\solution 
-The given equation of the ellipse can be rearranged as
+\item Find the coordinates of the focii, the vertices, the length of major and minor axes, the eccentricity and the length of the latus rectum of an ellipse whose equation is given by $\frac{x^2}{16}+\frac{y^2}{9}=1$.
+
+\solution
+The given equation of ellipse can be rearranged as 
 \begin{align}
-    \label{eq:ellipseEq1}
-    9x^2 + 16y^2-144 = 0
+ 9x^2+16y^2-144=0\label{eq:eq1}
 \end{align}
-The above equation can be equated to the generic equation of conic sections
+The above equation can be equated to the general equation of conic sections
 \begin{align}
-	\label{eq:ellipseEq2}
-	g(\vec{x}) = \vec{x}^T\vec{V}\vec{x} + 2\vec{u}^T\vec{x} + f = 0 
+ g\brak{\vec{x}}=\vec{x}^\top \vec{V} \vec{x} + 2\vec{u}^\top \vec{x} + f = 0\label{eq:eq2}
 \end{align}
-Comparing coefficients of both equations \eqref{eq:ellipseEq1} and \eqref{eq:ellipseEq2} 
+From \eqref{eq:eq1} and \eqref{eq:eq2}
 \begin{align}
-	\label{eq:eqV}
-	\vec{V} &= \myvec{ 9 & 0 \\ 0 & 16} \\
-	\label{eq:eqU}
-	\vec{u} &=  0 \\
-	\label{eq:eqF}
-	f &= -144 
+ \vec{V} &= \myvec{9&0\\0&16}\label{eq:eq3}\\
+ \vec{u} &= \vec{0}\\
+ f &= -144
 \end{align}
-From equation \eqref{eq:eqV}, since $\vec{V}$ is already diagonalized, the Eigen values $\lambda_1$ and $\lambda_2$ are given as 
+From \eqref{eq:eq3} the eigen values $\lambda_1 \text{ and } \lambda_2$ are given as
 \begin{align}
-	\label{eq:eqEigen1}
-	\lambda_1 &= 9 \\
-	\label{eq:eqEigen2}
-	\lambda_2 &= 16 
-\end{align}
-Since the given matrix is diagonal, the Eigen Vector matrix will be identity. It is given as
-\begin{align}
-	\vec{P} &= \myvec{ \vec{p_1} & \vec{p_2}} \\
-	&= \myvec{ 1 & 0 \\ 0 & 1}
+ \lambda_1 &= 9\\
+ \lambda_2 &= 16
 \end{align}
 \begin{enumerate}
-\item The eccentricity of the ellipse is given as  
+\item The eccentricity of the ellipse is given as
 \begin{align}
-	e &= \sqrt{1-\frac{\lambda_1}{\lambda_2}} \\
-	  &= \sqrt{1-\frac{9}{16}} \\
-          &= \frac{\sqrt{7}}{4}
+ e &= \sqrt{1 - \frac{\lambda_2}{\lambda_1}} \\
+          &= \sqrt{1-\frac{9}{16}}\\
+   &= \frac{\sqrt{7}}{4}
 \end{align}
-\item Finding the coordinates of Focii: 
+\item Finding the coordinates of Focii
 \begin{align}
-	\vec{n} &= \sqrt{\lambda_2}\vec{p_1} \\
-	&= \sqrt{16}\myvec{1 \\ 0} \\
-	\label{eq:eqN}
-	&= \myvec{4 \\ 0} 
+ \vec{F} &= \pm e\sqrt{\frac{\abs{f_0}}{\lambda_2\brak{1-e^2}}}\Vec{e_1}\\
+\text{Where }f_0 &=-f\\
+ \vec{F} &= \pm\sqrt{7}\myvec{1\\0}\\
+	&= \pm\myvec{\sqrt{7}\\0}
 \end{align}
+\item The length of the major axis is given by
 \begin{align}
-	\label{eq:eqC}
-	c  &=    \frac{e\vec{u}^{\top}\vec{n} \pm \sqrt{e^2\brak{\vec{u}^{\top}\vec{n}}^2-\lambda_2\brak{e^2-1}\brak{\norm{\vec{u}}^2 - \lambda_2 f}}}{\lambda_2e\brak{e^2-1}} 
+ &2\sqrt{\abs{\frac{f_0}{\lambda_1}}}\\
+        &2\sqrt{\abs{\frac{144}{9}}}= 8
 \end{align}
-Substituting values of $e, \vec{u}, \vec{n}, \lambda_2 \text{ and } f$ in \eqref{eq:eqC}
+\item The length of minor axis is given by
 \begin{align}
-	&=    \frac{0 \pm \sqrt{0-16\brak{\frac{7}{16}-1}\brak{{0 + 16\brak{144}}}}}{16\frac{\sqrt{7}}{4}\brak{\frac{7}{16}-1}} \\ 
-	&=    \frac{ \pm 576}{9\sqrt{7}}  \\  
+ &2\sqrt{\abs{\frac{f_0}{\lambda_2}}}\\
+        &2\sqrt{\abs{\frac{144}{16}}}= 6
 \end{align}
-The focus $\vec{F}$ of ellipse is expressed as
+\item The vertices of the ellipse are given by
 \begin{align}
-	\vec{F} &= \frac{ce^2\vec{n}-\vec{u}}{\lambda_2} \\
-	&= \frac{\frac{ \pm 576}{9\sqrt{7}} \brak{\frac{7}{16}}\myvec{4 \\0}}{16} \\
-	&= \pm \myvec{\sqrt{7} \\ 0}
+ \pm \myvec{0\\\sqrt{\abs{\frac{f_0}{\lambda_2}}}}= \pm \myvec{0\\4}
 \end{align}
-\item  The length of the major axis $2a$ is given by
+\item The length of latus rectum is given as
 \begin{align}
-	\label{eq:majorLength}
-	& 2\sqrt{\abs{\frac{f_0}{\lambda_1}}}
+ &2\frac{\sqrt{\abs{f_0 \lambda_1}}}{\lambda_2} \\
+ &= 2\frac{\sqrt{\abs{144\brak{9}}}}{16}\\
+ &= \frac{9}{2}
 \end{align}
-where
-\begin{align}
-	 f_0 &= \vec{u}^\top\vec{V}^{-1}\vec{u}-f \\
-	 f_0 &= 144 \because \vec{u} = 0 \\
-	\eqref{eq:majorLength} \implies  & 2\sqrt{\abs{\frac{144}{9}}}\\
-	&= 8
-\end{align}
-
-\item  The length of the minor axis is given by
-\begin{align}
-	\label{eq:minorLength}
-	& 2\sqrt{\abs{\frac{f_0}{\lambda_2}}}\\
-	&= 2\sqrt{\abs{\frac{144}{16}}}\\
-	&= 6
-\end{align}
-\item The vertices of the ellipse are given by 
-\begin{align}
-	& \pm\myvec{\frac{\text{2a}}{2} \\ 0} \\
-	&= \pm\myvec{4 \\ 0}
-\end{align}
-\item The length of the latus rectum is given as 
-\begin{align}
-	\label{eq:eqLatRectLen}
-	& 2\frac{\sqrt{\abs{f_0\lambda_1}}}{\lambda_2} \\
-	&= 2\frac{\sqrt{\abs{144\brak{9}}}}{16} \\
-	&= \frac{9}{2}
-\end{align}
-The relevant diagram is shown in Figure \ref{fig:Fig1}
-
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{figs/conic.png}
+	\end{center}
+\caption{}
+\label{fig:Fig1}
+\end{figure}
 \end{enumerate}
 \end{enumerate}
 \end{document}
