@@ -1,9 +1,9 @@
 /*Code by G. Likhitheshwar (works on termux)
 Feb 14, 2023
 Find the distance between the following pairs of points :
- a) (2,3), (4,1)
- b) (-5,7), (-1,3)
- c) (a,b), (-a,-b)*/
+ i) (2,3), (4,1)
+ ii) (-5,7), (-1,3)
+ iii) (a,b), (-a,-b)*/
  
 #include<stdio.h>       
 #include<stdlib.h>
