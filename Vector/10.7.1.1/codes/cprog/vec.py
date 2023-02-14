@@ -47,8 +47,7 @@ plt.plot(x_EF[0,:],x_EF[1,:],label='$distance(EF)$')
 
 sqr_vert = np.vstack((A,B,C,D,E,F)).T
 plt.scatter(sqr_vert[0,:],sqr_vert[1,:])
-textE='E(a={a:},b={b:})'
-textF='F(a={a:},b={b:})'
+
 vert_labels = ['A(2,3)','B(4,1)','C(-5,7)','D(-1,3)','E(1,2)','F(-1,-2)']
 
 for i, txt in enumerate(vert_labels):
