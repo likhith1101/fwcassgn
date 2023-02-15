@@ -8,7 +8,7 @@ Find the coordinates of the point which divides the join (−1,7) and (4,−3) i
 #include"lib.h"			//Functions
 int main()                 
 {
-	double **p,**q,**r;		//initializing the variables
+	double **p,**q,**r;		//initializing the variables as matrices
 	double ratio;	 
 	int m=2,n=1;
 	p=loadtxt("p.dat",2,1);		//loading the point P from the text file
