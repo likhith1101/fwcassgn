@@ -1,7 +1,6 @@
 double **createMat(int m,int n);
-void print(double **p, int m,int n);
 double **loadtxt(char *str,int m,int n);
-double linalg_norm(double **a, int m);
+double linalg_norm(double k);
 double **linalg_sub(double **a, double **b, int m, int n);
 double **linalg_add(double **a, double **b, int m, int n);
 double **scalar_mul(double **A,int row,int col,double num);
@@ -55,15 +54,11 @@ fclose(fp);
 
 //Defining the function for norm
 
-double linalg_norm(double **a, int m)
+double linalg_norm(double k)
 {
 int i;
-double norm=0.0;
-
- for(i=0;i<m;i++)
- {
-norm = norm + a[i][0]*a[i][0];
-}
+double norm;
+norm=k*k;
 return sqrt(norm);
 
 }
@@ -107,22 +102,11 @@ return c;
 
 double cross_prod(double **a, double **b)
 {
-	return a[0]*b[1]-a[1]*b[0];
+
+ return (a[0][0])*(b[1][0])-(b[0][0])*(a[1][0]);
 }
 
-//Defining the function for printing
-void print(double **p, int m,int n)
-{
- int i,j;
 
- for(i=0;i<m;i++)
- {
-  for(j=0;j<n;j++)
-  printf("%lf ",p[i][j]);
- printf("\n");
- }
-}
-//End function for printing
 
 double **scalar_mul(double **A,int row,int col,double num)
 {
@@ -138,11 +122,9 @@ int i,j;
     return A;
 }
 
-
-
-void save(double **a, int rows, int cols) {
+void save_p(double **a, int rows, int cols) {
   FILE *fp;
-  fp = fopen("result.dat", "w");
+  fp = fopen("p.dat", "w");
   //fprintf(fp, "The result of the multiplication is:\n");
   int i, j;
   for (i = 0; i < rows; i++) {
@@ -157,3 +139,39 @@ void save(double **a, int rows, int cols) {
   }
   fclose(fp);
 }
+
+void save_q(double **a, int rows, int cols) {
+  FILE *fp;
+  fp = fopen("q.dat", "w");
+  //fprintf(fp, "The result of the multiplication is:\n");
+  int i, j;
+  for (i = 0; i < rows; i++) {
+    //fprintf(fp, "[");
+    for (j = 0; j < cols; j++) {
+      fprintf(fp, "%lf", a[i][j]);
+      if (j < cols - 1) {
+        //fprintf(fp, ", ");
+      }
+    }
+    fprintf(fp, "\n");
+  }
+  fclose(fp);
+}
+void save_r(double **a, int rows, int cols) {
+  FILE *fp;
+  fp = fopen("r.dat", "w");
+  //fprintf(fp, "The result of the multiplication is:\n");
+  int i, j;
+  for (i = 0; i < rows; i++) {
+    //fprintf(fp, "[");
+    for (j = 0; j < cols; j++) {
+      fprintf(fp, "%lf", a[i][j]);
+      if (j < cols - 1) {
+        //fprintf(fp, ", ");
+      }
+    }
+    fprintf(fp, "\n");
+  }
+  fclose(fp);
+}
+
