@@ -25,7 +25,7 @@ def line_dir_pt(m,A,k1,k2):
 
 #Input parameters
 A = np.loadtxt('a.dat',dtype='float') 
-m = np.loadtxt('result.dat',dtype='float')
+m = np.loadtxt('m.dat',dtype='float')
 
 
 
