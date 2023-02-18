@@ -1,6 +1,6 @@
 /*Code by G. Likhitheshwar (works on termux)
 Feb 17, 2023
-Passing through (2,3.46) and inclined with the x-axis at an angle of 75 deg.
+Passing through (2,3.146) and inclined with the x-axis at an angle of 75 deg.
 */
  
 #include<stdio.h>       
