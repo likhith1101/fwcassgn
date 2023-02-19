@@ -27,7 +27,7 @@ int main()
 	int c1=-8,c2=2,c3=4;
 	double d1,d2,d3;
 	
-	// a) for line x−sqrt(3)y+8 = 0
+	// a) for line x−√3y+8 = 0
 	a=loadtxt("a.dat",2,1);						//loading the point A from the text file
 	x1=loadtxt("x1.dat",2,1);					//loading the point x1 intercepts from the given line
 	y1=loadtxt("y1.dat",2,1);					//loading the point y1 intercepts from the given line
