@@ -1,7 +1,13 @@
 /*Code by G. Likhitheshwar (works on termux)
-Feb 18, 2023
-Find the values of theta  and  p, if the equation xcos(theta)+ysin(theta)=p is the normal form
-of the line sqrt(3)x+y+2=0.
+Feb 19, 2023
+
+Reduce the following equations into normal form. Find their perpen-
+dicular distances from the origin and angle between perpendicular and the
+positive x-axis.
+a) x − √3y + 8 = 0
+b) y − 2 = 0
+c) x − y = 4
+
 Code is free any one can use 
 https://github.com/likhith1101/fwcassgn/blob/main/LICENSE.md
 */
@@ -22,38 +28,42 @@ int main()
 	double d1,d2,d3;
 	
 	// a) for line x−sqrt(3)y+8 = 0
-	a=loadtxt("a.dat",2,1);	
+	a=loadtxt("a.dat",2,1);						//loading the point A from the text file
 	x1=loadtxt("x1.dat",2,1);					//loading the point x1 intercepts from the given line
-	y1=loadtxt("y1.dat",2,1);
-	n1=loadtxt("n1.dat",2,1);
-	d1=abs(c1)/linalg_norm(n1,2);
-	theta1=radians(deg1); 
-	b1=scalar_mul(dir_vec(cos(theta1),sin(theta1)),M,N,d1);
-	save_b1(b1,M,N);
-	printf("perpendicular distance d1 is %lf\n",d1);		//printing the perpendicular distance
-	printf("angle theta1 is %lf\n",deg1);			//printing the angle	
+	y1=loadtxt("y1.dat",2,1);					//loading the point y1 intercepts from the given line
+	n1=loadtxt("n1.dat",2,1);					//loading the point normal vector from the given line
+	d1=abs(c1)/linalg_norm(n1,2);					//calculating perpendicular distance d1
+	theta1=radians(deg1); 						//Store 120deg in radians form	
+	b1=scalar_mul(dir_vec(cos(theta1),sin(theta1)),M,N,d1);		//point B1 with a perpendicular distance
+	save_b1(b1,M,N);						//saving the result to the figure 
+	printf("perpendicular distance d1 is %lf\n",d1);		//printing the perpendicular distance d1
+	printf("angle theta1 is %lf\n",deg1);				//printing the angle	
+	
+	
 	
 	// b) for line y-2=0
-	x2=loadtxt("x2.dat",2,1);					//loading the point x intercepts from the given line
-	y2=loadtxt("y2.dat",2,1);
-	n2=loadtxt("n2.dat",2,1);
-	d2=abs(c2)/linalg_norm(n2,2);
-	theta2=radians(deg2);  
-	b2=scalar_mul(dir_vec(cos(theta2),sin(theta2)),M,N,d2);
-	save_b2(b2,M,N);
-	printf("perpendicular distance d2 is %lf\n",d2);		//printing the perpendicular distance
-	printf("angle theta2 is %lf\n",deg2);
+	x2=loadtxt("x2.dat",2,1);					//loading the point x2 intercepts from the given line
+	y2=loadtxt("y2.dat",2,1);					//loading the point y2 intercepts from the given line
+	n2=loadtxt("n2.dat",2,1);					//loading the point normal vector from the given line
+	d2=abs(c2)/linalg_norm(n2,2);					//calculating perpendicular distance d2
+	theta2=radians(deg2);  						//Store 90deg in radians form	
+	b2=scalar_mul(dir_vec(cos(theta2),sin(theta2)),M,N,d2);		//point B2 with a perpendicular distance
+	save_b2(b2,M,N);						//saving the result to the figure 
+	printf("perpendicular distance d2 is %lf\n",d2);		//printing the perpendicular distance d2
+	printf("angle theta2 is %lf\n",deg2);				//printing the angle
+	
+	
 	
 	// c) for line x-y=4
-	x3=loadtxt("x3.dat",2,1);					//loading the point x intercepts from the given line
-	y3=loadtxt("y3.dat",2,1);
-	n3=loadtxt("n3.dat",2,1);				//loading the point y intercepts from the given line			//loading the point n from the text file
-	d3=abs(c3)/linalg_norm(n3,2);					//loading the point A from the text file
-	theta3=radians(deg3);   					//Store 210deg in radians form									
-	b3=scalar_mul(dir_vec(cos(theta3),sin(theta3)),M,N,d3);	//point B with a perpendicular distance
+	x3=loadtxt("x3.dat",2,1);					//loading the point x3 intercepts from the given line
+	y3=loadtxt("y3.dat",2,1);					//loading the point y3 intercepts from the given line
+	n3=loadtxt("n3.dat",2,1);					//loading the point normal vector from the given line
+	d3=abs(c3)/linalg_norm(n3,2);					//calculating perpendicular distance d3
+	theta3=radians(deg3);   					//Store 315deg in radians form									
+	b3=scalar_mul(dir_vec(cos(theta3),sin(theta3)),M,N,d3);		//point B3 with a perpendicular distance
 	save_b3(b3,M,N); 						//saving the result to the figure 
-	printf("perpendicular distance d3 is %lf\n",d3);		//printing the perpendicular distance
-	printf("angle theta3 is %lf\n",deg3);			//printing the angle	
+	printf("perpendicular distance d3 is %lf\n",d3);		//printing the perpendicular distance d3
+	printf("angle theta3 is %lf\n",deg3);				//printing the angle	
 	
 	
 }
