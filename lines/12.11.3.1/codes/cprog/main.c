@@ -1,3 +1,16 @@
+/*Code by G. Likhitheshwar (works on termux)
+Feb 21, 2023
+
+In each of the following cases, determine the direction cosines of the normal to
+the plane and the distance from the origin.
+1) z=2
+2) x + y + z = 1
+3) 2x + 3y – z = 5
+4) 5y + 8 = 0
+
+Code is free any one can use 
+https://github.com/likhith1101/fwcassgn/blob/main/LICENSE.md
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
