@@ -1,5 +1,5 @@
 /*Code by G. Likhitheshwar (works on termux)
-Feb 21, 2023
+Feb 22, 2023
 
 In each of the following cases, determine the direction cosines of the normal to
 the plane and the distance from the origin.
