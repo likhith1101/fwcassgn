@@ -2,6 +2,9 @@
 Feb 22, 2023
 Show that the line joining the origin to the point (2, 1, 1) is perpendicular to the
 line determined by the points (3, 5, – 1), (4, 3, – 1).
+Code is free any one can use 
+https://github.com/likhith1101/fwcassgn/blob/main/LICENSE.md
+
 */
  
 #include<stdio.h>       
