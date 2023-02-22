@@ -21,7 +21,7 @@ int main()
 	b=loadtxt("b.dat",m,n);		//loading the point B from the text file
 	M=linalg_sub(a,b,m,n);		//Subtraction of A and B gives direction vector
 	Mt=transpose(M,3,1);		//Transpose of a Matrix
-	if(matmul(Mt,p,1,3,3)==0)	//Check whether the line is perpendicular or not
+	if(matmul(Mt,p,1,3,3)==0)	//Check whether it is perpendicular or not
 	{
 		printf("Hence,it satisfies both the above conditions, shows that line passing through origin is perpendiclar to the line passing through points A and B");
 	}
