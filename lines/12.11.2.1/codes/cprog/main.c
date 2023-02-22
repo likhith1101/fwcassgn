@@ -2,6 +2,8 @@
 Feb 22, 2023
 Show that the three lines with direction cosines  are mutually perpendicular.
 12/13 ,−3/13 ,−4/13 ;4/13 ,12/13 ,3/13 ;3/13 ,−4/13 ,12/13
+Code is free any one can use 
+https://github.com/likhith1101/fwcassgn/blob/main/LICENSE.md
 */
  
 #include<stdio.h>       
