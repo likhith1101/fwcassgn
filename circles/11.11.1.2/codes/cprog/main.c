@@ -1,5 +1,5 @@
 /*Code by G. Likhitheshwar (works on termux)
-Feb 20, 2023
+Feb 23, 2023
 Link to License("https://github.com/likhith1101/fwcassgn/blob/main/LICENSE.md")
 Find the equation of circle with centre (-2,3) and radius 4 
 */ 
