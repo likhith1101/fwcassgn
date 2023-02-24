@@ -45,7 +45,7 @@ int main()
 	normM2=linalg_norm1(m2,m);  //Norm or magnitude of m2
 	mul=matmul(m1t,m2,1,2,2);  //matrix multiplication of two matrices
 	x=mul/(normM1*normM2);  //finding the angle
-angle=radians(x);   //Angle in radians form
+  angle=acos(x)*180/3.14159265359; //Angle in degrees form
 	printf("%lf",angle);  //printing the angle
 	//saving all the results to the figure
 	save_r(r);
