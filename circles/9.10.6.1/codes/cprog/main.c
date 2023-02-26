@@ -20,11 +20,11 @@ int main()
 	
 	
 	a = loadtxt1("a.dat", 2, 1); 	// Loading the matrix A from the text files
-	b = loadtxt1("b.dat", 2, 1);	// Loading the matrix A from the text files
-	m = loadtxt1("m.dat", 1, 2);	// Loading the matrix A from the text files
-	v = loadtxt1("v.dat", 2, 2);	// Loading the matrix A from the text files
-	u = loadtxt1("u.dat", 2, 1);	// Loading the matrix A from the text files
-	q = loadtxt1("q.dat", 2, 1);	// Loading the matrix A from the text files
+	b = loadtxt1("b.dat", 2, 1);	// Loading the matrix B from the text files
+	m = loadtxt1("m.dat", 1, 2);	// Loading the matrix m from the text files
+	v = loadtxt1("v.dat", 2, 2);	// Loading the matrix V from the text files
+	u = loadtxt1("u.dat", 2, 1);	// Loading the matrix u from the text files
+	q = loadtxt1("q.dat", 2, 1);	// Loading the matrix q from the text files
 	
         
       
