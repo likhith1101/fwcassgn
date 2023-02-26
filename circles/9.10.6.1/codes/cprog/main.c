@@ -55,7 +55,7 @@ int main()
 	
 	if(angle1==angle2) //Check whether two angles are equal or not
 	{
-	printf("Hence proved, that intersecting angles are equal");
+	printf("Hence proved, that two intersecting angles are equal");
 	}
 	else
 	{
