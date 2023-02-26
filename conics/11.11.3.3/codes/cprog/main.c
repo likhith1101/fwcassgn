@@ -1,7 +1,7 @@
-/*Code by G. Arun Kumar (works on termux)
-Feb 21, 2023
-Link to License("https://github.com/aruniot099/FWC-1/blob/main/License")
-Find the coordinates of the focii, the vertices, the length of major and minor axes, the eccentricity and the length of the latus rectum of an ellipse whose equation is given by x^2/36 +y^2/16 = 1.
+/*Code by G. Likhitheshwar (works on termux)
+Feb 26, 2023
+Link to License("https://github.com/likhith1101/fwcassgn/blob/main/LICENSE.md")
+Find the coordinates of the focii, the vertices, the length of major and minor axes, the eccentricity and the length of the latus rectum of an ellipse whose equation is given by x^2/16 +y^2/9 = 1.
 */
 #include<stdio.h>
 #include<stdlib.h>
