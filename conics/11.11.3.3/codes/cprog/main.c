@@ -17,12 +17,12 @@ int main()
 	int m=2,n=1, a=4, b=3, f=-144, f0=144;
 
 	// Loading the matrices from text files
-	v = loadtxt("v.dat", m, m);
-	u = loadtxt("u.dat", m, n);
-	o = loadtxt("o.dat", m, n);
-	N = loadtxt("n.dat", m, n);
-	e1 = loadtxt("e1.dat", m, n);
-	z = loadtxt("z.dat", m, n);
+	v = loadtxt("data/v.dat", m, m);
+	u = loadtxt("data/u.dat", m, n);
+	o = loadtxt("data/o.dat", m, n);
+	N = loadtxt("data/n.dat", m, n);
+	e1 = loadtxt("data/e1.dat", m, n);
+	z = loadtxt("data/z.dat", m, n);
 
 	// Creating the matrices
 	G = np_array(a, 0);
@@ -49,11 +49,11 @@ int main()
     	fl2 = linalg_norm(F2, m);
 
     	// Determining the points of Major Axis 
-ellipAxis_A = loadtxt("n.dat", m, n);
-ellipAxis_B = scalar_mul(loadtxt("n.dat", m,n),m,n,-1.0);
+ellipAxis_A = loadtxt("data/n.dat", m, n);
+ellipAxis_B = scalar_mul(loadtxt("data/n.dat", m,n),m,n,-1.0);
     	// Determinig the points of Minor Axis
-    	ellipMinorAxis_A=mult_float(0.75, matmul(z, N, m, n, 2), m, n);
-    	ellipMinorAxis_B=mult_float(-0.75, matmul(z, N, m, n, 2), m, n);
+    	ellipMinorAxis_A=mult_float(1/1.33, matmul(z, N, m, n, 2), m, n);
+    	ellipMinorAxis_B=mult_float(-1/1.33, matmul(z, N, m, n, 2), m, n);
 
     	lr1_Ay = sqrt((f0 - lamda0 * pow(fl1, 2)) / lamda1);
     	A = linalg_add(F1, np_array(0, lr1_Ay), m, n);
