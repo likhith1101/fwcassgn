@@ -35,18 +35,18 @@ def affine_transform(P,c,x):
 #Input parameters
 a=4
 b=3
-ellipAxis_A= np.loadtxt('ellipAxis_A.dat',dtype='double')
-ellipAxis_B= np.loadtxt('ellipAxis_B.dat',dtype='double')
-ellipMinorAxis_A=np.loadtxt('ellipMinorAxis_A.dat',dtype='float')
-ellipMinorAxis_B=np.loadtxt('ellipMinorAxis_B.dat',dtype='float')
-A=np.loadtxt('A.dat',dtype='float')
-B=np.loadtxt('B.dat',dtype='float')
-C=np.loadtxt('C.dat',dtype='float')
-D=np.loadtxt('D.dat',dtype='float')
-H=np.loadtxt('H.dat',dtype='float')
-G=np.loadtxt('G.dat',dtype='float')
-F1=np.loadtxt('F1.dat',dtype='float')
-F2=np.loadtxt('F2.dat',dtype='float')
+ellipAxis_A= np.loadtxt('data/ellipAxis_A.dat',dtype='double')
+ellipAxis_B= np.loadtxt('data/ellipAxis_B.dat',dtype='double')
+ellipMinorAxis_A=np.loadtxt('data/ellipMinorAxis_A.dat',dtype='float')
+ellipMinorAxis_B=np.loadtxt('data/ellipMinorAxis_B.dat',dtype='float')
+A=np.loadtxt('data/A.dat',dtype='float')
+B=np.loadtxt('data/B.dat',dtype='float')
+C=np.loadtxt('data/C.dat',dtype='float')
+D=np.loadtxt('data/D.dat',dtype='float')
+H=np.loadtxt('data/H.dat',dtype='float')
+G=np.loadtxt('data/G.dat',dtype='float')
+F1=np.loadtxt('data/F1.dat',dtype='float')
+F2=np.loadtxt('data/F2.dat',dtype='float')
 
 
 #Generating the ellipse
