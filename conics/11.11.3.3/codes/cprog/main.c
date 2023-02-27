@@ -52,8 +52,8 @@ int main()
 ellipAxis_A = loadtxt("data/n.dat", m, n);
 ellipAxis_B = scalar_mul(loadtxt("data/n.dat", m,n),m,n,-1.0);
     	// Determinig the points of Minor Axis
-    	ellipMinorAxis_A=mult_float(1/1.33, matmul(z, N, m, n, 2), m, n);
-    	ellipMinorAxis_B=mult_float(-1/1.33, matmul(z, N, m, n, 2), m, n);
+    	ellipMinorAxis_A=scalar_mul(matmul(z, N, m, n, 2), m, n,1/1.33);
+    	ellipMinorAxis_B=scalar_mul(matmul(z, N, m, n, 2), m, n,-1/1.33);
 
     	lr1_Ay = sqrt((f0 - lamda0 * pow(fl1, 2)) / lamda1);
     	A = linalg_add(F1, np_array(0, lr1_Ay), m, n);
