@@ -64,16 +64,16 @@ ellipAxis_B = scalar_mul(loadtxt("data/n.dat", m,n),m,n,-1.0);
     	D = linalg_add(F2, np_array(0, -(lr2_Ay)), m, n);
 
     	// Saving the results in text files
-    	save(ellipAxis_A, m, n,"ellipAxis_A.dat");
-    	save(ellipAxis_B, m, n, "ellipAxis_B.dat");
-    	save(ellipMinorAxis_A, m, n, "ellipMinorAxis_A.dat");
-    	save(ellipMinorAxis_B, m, n, "ellipMinorAxis_B.dat");
-    	save(A, m, n, "A.dat");
-    	save(B, m, n, "B.dat");
-    	save(C, m, n, "C.dat");
-    	save(D, m, n, "D.dat");
-    	save(H, m, n, "H.dat");
-    	save(G, m, n, "G.dat");
-    	save(F1, m, n, "F1.dat");
-    	save(F2, m, n, "F2.dat");
+    	save(ellipAxis_A, m, n,"data/ellipAxis_A.dat");
+    	save(ellipAxis_B, m, n, "data/ellipAxis_B.dat");
+    	save(ellipMinorAxis_A, m, n, "data/ellipMinorAxis_A.dat");
+    	save(ellipMinorAxis_B, m, n, "data/ellipMinorAxis_B.dat");
+    	save(A, m, n, "data/A.dat");
+    	save(B, m, n, "data/B.dat");
+    	save(C, m, n, "data/C.dat");
+    	save(D, m, n, "data/D.dat");
+    	save(H, m, n, "data/H.dat");
+    	save(G, m, n, "data/G.dat");
+    	save(F1, m, n, "data/F1.dat");
+    	save(F2, m, n, "data/F2.dat");
 }
