@@ -84,58 +84,7 @@ fclose(fp);
     return head;
 }
 
-Node* assign(int numRows, int numCols,int *array)
-{
-    Node* head = NULL;
-    Node* currentRow = NULL;
 
-    // Loop through each row
-    for (int i = 0; i < numRows; i++) 
-    {
-        Node* newRow = NULL;
-        Node* currentCol = NULL;
-
-        // Loop through each column in the current row
-        for (int j = 0; j < numCols; j++)
-	{
-            int value;
-	    int index=0;
-            //printf("Enter the value at position (%d,%d): ", i, j);
-            //scanf("%d", &value);
-	    value=array[i];
-	    
-
-
-            // If the value is not 0, create a new node and add it to the matrix
-            if (value != 0)
-	    {
-                Node* newNode = createNode(value, i, j);
-                if (newRow == NULL) {
-                    newRow = newNode;
-                    currentCol = newNode;
-                } 
-		else
-		{
-                    currentCol->next = newNode;
-                    currentCol = newNode;
-                }
-            }
-        }
-
-        // If the current row is not empty, add it to the matrix
-        if (newRow != NULL) {
-            if (head == NULL) {
-                head = newRow;
-                currentRow = newRow;
-            } else {
-                currentRow->next = newRow;
-                currentRow = newRow;
-            }
-        }
-    }
-
-    return head;
-}
 
 
 
