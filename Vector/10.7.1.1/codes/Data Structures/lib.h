@@ -158,21 +158,8 @@ Node *linalg_sub(Node *a, Node *b) {
     }
 
     return result;
+
 }
-
-Node *transpose_matrix(Node *head) {
-    Node *result = NULL;
-    Node *current = head;
-
-    while (current != NULL) {
-        insert_node(&result, current->col, current->row, current->value);
-        current = current->next;
-    }
-
-    return result;
-}
-
-
             // If the dot product is not 0, create a new node and add it to the matrix
 
 
@@ -202,17 +189,6 @@ double linalg_norm(Node* head, int numRows, int numCols)
 }
 
 
-void check(int d1,int d2)
-{
-	if(d1!=d2)
-	{
-		printf("The parallelogram is satisfied ");
-	}
-	else
-	{
-		printf("The parallelogram is not satisfied ");
-	}
-}
 
 
 void save(double d1, double d2, double d3) {
