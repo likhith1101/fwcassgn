@@ -8,14 +8,6 @@ typedef struct Node {
 
 
 
-
-
-
-
-
-
-
-
 Node* createNode(int value, int row, int col) 
 {
     Node* newNode = (Node*)malloc(sizeof(Node));
