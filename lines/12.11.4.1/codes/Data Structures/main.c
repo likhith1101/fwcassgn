@@ -12,12 +12,11 @@ https://github.com/likhith1101/fwcassgn/blob/main/LICENSE.md
 #include"lib.h"			//Functions
 int main()         
 {
-Node *a = NULL;  // declaring the node for point A
-    Node *b = NULL;  // declaring the node for point B	//initializing the variables
-	Node *mul=NULL; 
-Node *p=NULL;
-Node *M=NULL;
-Node *Mt=NULL;
+       Node *a = NULL;  // declaring the node for point A
+       Node *b = NULL;  // declaring the node for point B	
+       Node *p=NULL;    // declaring the node for point P
+       Node *M=NULL;    // declaring the node for direction vector M
+       Node *Mt=NULL;   // declaring the node for transpose of direction vector Mt
 	int m=3,n=1;
 	p=loadtxt("p.dat",m,n);		//loading the point P from the text file
 	a=loadtxt("a.dat",m,n);	        //loading the point A from the text file
