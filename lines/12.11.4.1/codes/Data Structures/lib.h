@@ -80,34 +80,7 @@ Node* loadtxt(char *str,int numRows,int numCols) {
 }
 
 
-/*Node* loadtxt(char *str,int numRows, int numCols) {
-	FILE *fp;
-    Node* head = NULL;
-    Node* currentRow = NULL;
 
-    // Loop through each row
-    for (int i = 0; i < numRows; i++) {
-        Node* newRow = NULL;
-        Node* currentCol = NULL;
-fp = fopen(str, "r");
-
-        // Loop through each column in the current row
-        for (int j = 0; j < numCols; j++) {
-            int value;
-            //printf("Enter the value at position (%d,%d): ", i, j);
-            fscanf(fp,"%d", &value);
-
-
-            // If the value is not 0, create a new node and add it to the matrix
-            if (value != 0) {
-                Node* newNode = createNode(value, i, j);
-                if (newRow == NULL) {
-                    newRow = newNode;
-                    currentCol = newNode;
-                } else {
-                    currentCol->next = newNode;
-                    currentCol = newNode;
-        */
 
 Node *matmul(Node* A, Node* B, int numRowsA, int numColsB) {
     // Create a new empty linked list for the result
@@ -269,29 +242,8 @@ double linalg_norm(Node* head, int numRows, int numCols)
 }
 
 
-void check(int d1,int d2)
-{
-	if(d1!=d2)
-	{
-		printf("The parallelogram is satisfied ");
-	}
-	else
-	{
-		printf("The parallelogram is not satisfied ");
-	}
-}
 
 
-void save(double d1, double d2, double d3) {
-  FILE *fp;
-  fp = fopen("result.dat", "w");
-  //fprintf(fp, "The result of the multiplication is:\n");
-  
-      fprintf(fp, "%lf", d1);
-        fprintf(fp, "\n%lf", d2);
-      fprintf(fp, "\n%lf", d3);
- 
-  fclose(fp);
-}
+
 
 
