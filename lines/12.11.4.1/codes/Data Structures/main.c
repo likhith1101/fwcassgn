@@ -25,7 +25,7 @@ int main()
 	Mt=transpose_matrix(M);	//Transpose of a Matrix
 	if(matmul(Mt,p,n,n)->value==0)	//Check whether it is perpendicular or not
 	{
-		printf("Hence,it satisfies both the above conditions, shows that line passing through origin is perpendiclar to the line");
+		printf("Hence,it satisfies both the above conditions, shows that line passing through origin is perpendiclar to the line passing through point A and B");
 	}
 	else
 	{
