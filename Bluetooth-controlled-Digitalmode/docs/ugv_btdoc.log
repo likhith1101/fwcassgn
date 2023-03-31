@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.8)  31 MAR 2023 13:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.8)  31 MAR 2023 13:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -815,8 +815,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-No file ugv_btdoc.aux.
+) (./ugv_btdoc.aux)
 \openout1 = `ugv_btdoc.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
@@ -837,6 +836,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -909,6 +909,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 90.
 LaTeX Info: Redefining \pageref on input line 90.
 LaTeX Info: Redefining \nameref on input line 90.
+
+(./ugv_btdoc.out) (./ugv_btdoc.out)
 \@outlinefile=\write4
 \openout4 = `ugv_btdoc.out'.
 
@@ -919,6 +921,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 92.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 92.
+ (./ugv_btdoc.toc)
 \tf@toc=\write5
 \openout5 = `ugv_btdoc.toc'.
 
@@ -938,12 +941,12 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Underfull \hbox (badness 10000) in paragraph at lines 179--179
-[][][]$\OT1/lmtt/m/n/10 https : / / github . com / likhith1101 /
+[][][]$\OT1/lmtt/m/n/10 https : / / github . com / likhith1101 / fwcassgn /
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 179--179
-\OT1/lmtt/m/n/10 Wi-[]Fi-[]controlled-[]UGV / blob / main / codes / src /
+\OT1/lmtt/m/n/10 tree / main / Bluetooth-[]controlled-[]Digitalmode /
  []
 
 
@@ -965,33 +968,27 @@ Overfull \hbox (15.1252pt too wide) in paragraph at lines 193--249
 
 
 ] (./ugv_btdoc.aux)
-
-Package rerunfilecheck Warning: File `ugv_btdoc.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ugv_btdoc.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  205A9C42D578734C03F62237FD1545EC;206.
+Package rerunfilecheck Info: File `ugv_btdoc.out' has not changed.
+(rerunfilecheck)             Checksum: 205A9C42D578734C03F62237FD1545EC;206.
  ) 
 Here is how much of TeX's memory you used:
- 37744 strings out of 478287
- 868622 string characters out of 5849289
- 1535735 words of memory out of 5000000
- 55437 multiletter control sequences out of 15000+600000
+ 37755 strings out of 478287
+ 868758 string characters out of 5849289
+ 1539965 words of memory out of 5000000
+ 55440 multiletter control sequences out of 15000+600000
  508101 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,9n,89p,1198b,1577s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,9n,89p,1198b,1381s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
 vips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/
 texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmt
 t10.pfb>
-Output written on ugv_btdoc.pdf (1 page, 115350 bytes).
+Output written on ugv_btdoc.pdf (1 page, 115356 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 75 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  15 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
