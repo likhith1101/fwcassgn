@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[none]{hyphenat}
+\usepackage[english]{babel}
+\usepackage{caption}
+\usepackage[parfill]{parskip}
+\usepackage{hyperref}
+\usepackage{import}
+\usepackage{booktabs}
+\def\inputGnumericTable{}
+\usepackage{color}                                            
+    \usepackage{array}                                            
+    \usepackage{longtable}                                        
+    \usepackage{calc}                                             
+    \usepackage{multirow}                                         
+    \usepackage{hhline}                                           
+    \usepackage{ifthen}
+\usepackage{array}
+\usepackage{amsmath}  
+\usepackage{parallel,enumitem}
+\usepackage{listings}
+\lstset{
+language=tex,
+frame=single,
+breaklines=true
+}
+ 
+\begin{document}
+
+\section{Flash STM32F103C8 using USB2UART}
+
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item Make connections as shown in Table \ref{tab:stm32-usb2uart} and modify the circuit accordingly
+			\begin{table}[!h]
+			\centering
+		\input{tables/stm32-usb2uart.tex}
+		\caption{}
+		\label{tab:stm32-usb2uart}
+	\end{table}
+\item Create a src folder and inside src folder, create a source code in c/c++ which should be flashed into stm32f103c8 (for example: blink.c).
+\item Create a platformio.ini file by adding the lines
+\begin{lstlisting}
+[env:bluepill_f103c8]
+platform = ststm32
+board = bluepill_f103c8
+framework = stm32cube
+upload_protocol=serial
+upload_port=/dev/ttyUSB0
+upload_speed=115200
+\end{lstlisting}
+
+\item Before flashing into stm32f103c8, make sure that stm32f103c8 is in bootloader mode.
+
+\item After executing 
+\begin{lstlisting}
+pio run -t upload
+\end{lstlisting}
+
+\item After flashing, the inbuilt LED present on the stm32f103c8 will start blinking.
+
+\item Remember to remove from the bootloader mode and want to run your application code from the main flash memory again.
+\end{enumerate}
+\end{document}
